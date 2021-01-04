@@ -1,5 +1,5 @@
 <template>
-  <div class="carte">
+  <div class="Carte">
  CARTE ICI
   </div>
 </template>
@@ -7,9 +7,8 @@
 <script>
 // @ is an alias to /src
 
-
 export default {
-  name: 'carte',
+  name: 'Carte',
   
 }
 </script>

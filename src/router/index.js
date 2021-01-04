@@ -13,7 +13,7 @@ const routes = [
   },
   {
     path: '/',
-    name: 'carte',
+    name: 'Carte',
     component: carte
   },
   {
