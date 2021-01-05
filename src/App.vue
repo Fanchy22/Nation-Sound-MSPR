@@ -20,6 +20,10 @@
   color: #2c3e50;
 }
 
+.header{
+  background-image: url("https://cdn.radiofrance.fr/s3/cruiser-production/2020/08/f3d13578-17c2-4138-a3ca-d3d8f9a825a1/870x489_maxnewsspecial141522.jpg");
+}
+
 #nav {
   padding: 30px;
 
