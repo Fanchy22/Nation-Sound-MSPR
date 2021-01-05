@@ -1,15 +1,28 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/Header">Header</router-link> |
-      <router-link to="/">Accueil</router-link> |
-      <router-link to="/about">Informations</router-link> |
-      <router-link to="/Carte">Carte</router-link> |
-      <router-link to="/Lineup">Programmation</router-link> |
-    </div>
+    <header class="header">
+      <H1 class="text-light">Nation sound</H1>
+      <img src="logo.png">
+
+    </header>
+    <Menu></Menu>
+
     <router-view/>
   </div>
 </template>
+
+<script>
+
+import Menu from '@/components/Menu.vue'
+
+export default {
+
+  components: {
+    Menu // Register your component
+  }
+}
+
+</script>
 
 <style lang="scss">
 #app {

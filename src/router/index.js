@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Carte from '../views/Carte.vue'
-import Header from '../views/Header.vue'
+
 
 Vue.use(VueRouter)
 
@@ -16,11 +16,6 @@ const routes = [
     path: '/carte',
     name: 'Carte',
     component: Carte
-  },
-  {
-    path: '/Header',
-    name: 'Header',
-    component: Header
   },
   {
     path: '/about',
