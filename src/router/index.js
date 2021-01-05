@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Carte from '../views/Carte.vue'
 
+
+
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -11,6 +14,7 @@ const routes = [
     name: 'Home',
     component: Home
   },
+
   {
     path: '/carte',
     name: 'Carte',
