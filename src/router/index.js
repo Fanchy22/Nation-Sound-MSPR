@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Carte from '../views/Carte.vue'
+import Lineup from '../views/Lineup'
 
 
 
@@ -15,7 +16,11 @@ const routes = [
     name: 'Home',
     component: Home
   },
-
+  {
+    path: '/lineup',
+    name: 'Lineup',
+    component: Lineup
+  },
   {
     path: '/carte',
     name: 'Carte',
