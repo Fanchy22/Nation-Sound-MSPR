@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/Header">Header</router-link>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-       <router-link to="/Carte">Carte</router-link>
+      <router-link to="/Header">Header</router-link> |
+      <router-link to="/">Accueil</router-link> |
+      <router-link to="/about">Informations</router-link> |
+      <router-link to="/Carte">Carte</router-link> |
+      <router-link to="/Lineup">Programmation</router-link> |
     </div>
     <router-view/>
   </div>
