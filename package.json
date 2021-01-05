@@ -7,17 +7,8 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-<<<<<<< Updated upstream
-    "@popperjs/core": "^2.6.0",
     "bootstrap-vue": "^2.21.2",
-=======
-    "bootstrap": "^5.0.0-beta1",
-<<<<<<< HEAD
-    "bootstrap-vue": "^2.21.2",
-=======
     "colorette": "^1.2.1",
->>>>>>> Stashed changes
->>>>>>> master
     "core-js": "^3.6.5",
     "mdbvue": "^6.7.2",
     "register-service-worker": "^1.7.1",
