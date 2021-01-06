@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Nation-Sound-MSPR/precache-manifest.57f68564a39dfd91d76d1f9c8fbf2eca.js"
+  "/Nation-Sound-MSPR/precache-manifest.25e6fe497ab30482552674c40d0ef0ba.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "nation-sound-front"});

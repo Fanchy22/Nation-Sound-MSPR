@@ -9,6 +9,10 @@
     </header>
     <Menu></Menu>
     <router-view/>
+    <select v-model="$i18n.locale" two>
+      <option>FR</option> 
+      <option>EN</option>
+    </select>
   </div>
 </template>
 
@@ -30,7 +34,7 @@ export default {
     Menu
   },
   mounted() {
-    this.$i18n.locale = 'de'
+    this.$i18n.locale = 'fr'
   }
 }
 
