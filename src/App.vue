@@ -1,14 +1,5 @@
-   <template>
-      <div id="app">
-        <header class="header">
-          <div class="d-flex flex-row align-items-center">
-            <img src="./assets/logo-white.png" style="height: 20vw;">
-            <H1 class="text-light" style="font-size: 7vw;">NATION SOUND</H1>
-            <Menu></Menu>
-          </div>
-        </header>
-
 <template>
+
   <div id="app" class="header">
     <header>
       <div class="d-flex flex-row align-items-center">
@@ -22,26 +13,18 @@
       <option>FR</option> 
       <option>EN</option>
     </select>
-  </div>
-</template>
-
-        <router-view/>
 
 
         <footer color="blue" class="footer vw-100 font-small pt-4 mt-4">
-import Menu from '@/components/Menu.vue';
-import Vue from 'vue';
-import VueCountdown from '@chenfengyuan/vue-countdown';
 
               <div class="container">
                 <div class="row">
 
-                <div class="col">
+                  <div class="col">
 
                   <img src="./assets/logo-gradient.png" style="height: 16vw;">
 
                 </div>
-
                   <div class="col">
                     <h5 class="title text-primary">Contact</h5>
 
@@ -55,7 +38,7 @@ import VueCountdown from '@chenfengyuan/vue-countdown';
 
 
                   </div>
-                <div class="col">
+                  <div class="col">
                   <div>
                     <h5 class="title text-primary">Liens pratiques</h5>
 
@@ -72,12 +55,11 @@ import VueCountdown from '@chenfengyuan/vue-countdown';
 
                   </div>
                 </div>
-
                   <div class="col">
                   <h5 class="title text-primary">À propos</h5>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis, eaque earum iure magni minus omnis quos. Eveniet nam nulla tempora. Aliquid delectus esse eveniet inventore ipsa! Libero porro, sed.</p>
                   </div>
-              </div>
+                </div>
               </div>
 
               <div class="footer-copyright text-center py-3 text-light">
@@ -85,11 +67,9 @@ import VueCountdown from '@chenfengyuan/vue-countdown';
                   &copy; 2020 Copyright: Nation Sound </a>
                 </container>
               </div>
-            </footer>
+        </footer>
 
-
-      </div>
-
+  </div>
     </template>
 
     <script>
