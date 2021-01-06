@@ -6,7 +6,7 @@
       <img src="logo.png">
 
     </header>
-    <Menu></Menu>
+    <!-- <Menu></Menu> -->
 
     <router-view/>
   </div>
@@ -20,6 +20,9 @@ export default {
 
   components: {
     Menu // Register your component
+  },
+  mounted() {
+    this.$i18n.locale = 'de'
   }
 }
 
