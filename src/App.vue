@@ -9,17 +9,15 @@
     </header>
     <Menu></Menu>
     <router-view/>
-    <select v-model="$i18n.locale" two>
-      <option>FR</option> 
-      <option>EN</option>
-    </select>
   </div>
+
+
 </template>
+
 
 <script>
 
 import Menu from '@/components/Menu.vue';
-
 import Vue from 'vue';
 import VueCountdown from '@chenfengyuan/vue-countdown';
 

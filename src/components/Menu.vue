@@ -6,12 +6,18 @@
         <router-link to="/about" class="text-light">Informations</router-link>
         <router-link to="/Carte" class="text-light">Carte</router-link>
         <router-link to="/Lineup" class="text-light">Programmation</router-link>
+        <select v-model="$i18n.locale" two>
+          <option>FR</option>
+          <option>EN</option>
+        </select>
       </div>
 
     </Slide>
 
 
 </template>
+
+
 
 
 <script>
@@ -21,6 +27,6 @@ import { Slide } from 'vue-burger-menu'
   name : "Menu",
   components: {
   Slide // Register your component
-  }
+  },
 }
 </script>
