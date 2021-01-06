@@ -1,7 +1,5 @@
 <template>
     <div class="lineup bg-light h-100">
-        <h1 class="pb-4 pt-4">Programmation</h1>
-    <div class="lineup">
         <h1 class="pb-4 pt-4">Lineup</h1>
         <b-container class="pb-5">
             <b-row align-h="center">
