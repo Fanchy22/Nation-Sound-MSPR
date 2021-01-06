@@ -3,13 +3,13 @@
         <h1 class="pb-4 pt-4">Lineup</h1>
         <b-container class="pb-5">
             <b-row align-h="center">
-                <b-button variant="dark" style="width: 10vw" class="m-3">All</b-button>
-                <b-button variant="dark" style="width: 10vw" class="m-3">Friday</b-button>
-                <b-button variant="dark" style="width: 10vw" class="m-3">Saturday</b-button>
-                <b-button variant="dark" style="width: 10vw" class="m-3">Sunday</b-button>
+                <b-button variant="dark" style="width: 15vw" class="m-3">All</b-button>
+                <b-button variant="dark" style="width: 15vw" class="m-3">Friday</b-button>
+                <b-button variant="dark" style="width: 15vw" class="m-3">Saturday</b-button>
+                <b-button variant="dark" style="width: 15vw" class="m-3">Sunday</b-button>
             </b-row>
-            <b-row align-h="center">
-                <b-input-group class="mt-3" style="max-width: 60vw">
+            <b-row align-h="center" class="pt-2">
+                <b-input-group class="mt-3" style="width: 40vw">
                     <b-input-group-prepend is-text>
                         <b-icon icon="search"></b-icon>
                     </b-input-group-prepend>
@@ -24,12 +24,14 @@
             <b-row align-h="center">
                 <b-card-group deck id="lineup" v-for="(item, index) in items">
                     <b-col>
-                        <b-card text-variant="dark" style="width: 20rem; text-align: left" class="mb-2">
+                        <b-card text-variant="dark" style="width: 20rem;" class="mb-2">
                             <b-card-img :src='item.artistThumbnail' style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
-                            <b-card-title>{{item.artistName}}</b-card-title>
-                            <b-card-sub-title>{{item.day}} - {{item.time}}</b-card-sub-title>
-                            <b-card-text class="mb-5">{{item.type}} at {{item.place}}</b-card-text>
-                            <a v-b-toggle class="text-dark" :href="'#example-collapse'+index" @click.prevent>About</a>
+                            <div style="text-align: left" class="mb-5">
+                                <b-card-title>{{item.artistName}}</b-card-title>
+                                <b-card-sub-title>{{item.day}} - {{item.time}}</b-card-sub-title>
+                                <b-card-text>{{item.type}} at {{item.place}}</b-card-text>
+                            </div>
+                            <b-button v-b-toggle style="text-align: center; width: 100%" class="btn-light" :href="'#example-collapse'+index" @click.prevent>More informations</b-button>
                             <b-collapse :id="'example-collapse'+index">
                                 <div class="card-body">{{item.description}}</div>
                             </b-collapse>
