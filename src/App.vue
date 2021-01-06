@@ -2,11 +2,13 @@
 <template>
   <div id="app">
     <header class="header">
-      <H1 class="text-light">Nation sound</H1>
-      <img src="logo.png">
-
+      <div class="d-flex flex-row align-items-center">
+        <img src="./assets/logo-white.png" style="height: 20vw;">
+        <H1 class="text-light" style="font-size: 7vw;">NATION SOUND</H1>
+        <Menu></Menu>
+      </div>
     </header>
-    <Menu></Menu>
+
 
     <router-view/>
   </div>
@@ -16,14 +18,19 @@
 
 import Menu from '@/components/Menu.vue'
 
+
+
+
 export default {
 
   components: {
-    Menu // Register your component
-  }
+    Menu// Register your component
+  },
 }
 
+
 </script>
+
 
 <style lang="scss">
 #app {
@@ -36,8 +43,14 @@ export default {
 
 
   .header{
-    background-image: url("https://cdn.radiofrance.fr/s3/cruiser-production/2020/08/f3d13578-17c2-4138-a3ca-d3d8f9a825a1/870x489_maxnewsspecial141522.jpg");
+    background-image: url("./assets/bg-header.jpeg");
+    height: 100vh;
+    background-size: cover;
   }
+
+.bm-burger-bars {
+  background-color: #fdfdfe;
+}
 
   #nav {
     padding: 30px;

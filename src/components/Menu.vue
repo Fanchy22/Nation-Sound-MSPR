@@ -1,11 +1,11 @@
 <template>
 
-    <Slide>
-      <div id="nav">
-        <router-link to="/">Accueil</router-link> |
-        <router-link to="/about">Informations</router-link> |
-        <router-link to="/Carte">Carte</router-link> |
-        <router-link to="/Lineup">Programmation</router-link> |
+    <Slide right>
+      <div id="nav" class="row ml-4 mr-4">
+        <router-link to="/" class="text-light">Accueil</router-link>
+        <router-link to="/about" class="text-light">Informations</router-link>
+        <router-link to="/Carte" class="text-light">Carte</router-link>
+        <router-link to="/Lineup" class="text-light">Programmation</router-link>
       </div>
 
     </Slide>
