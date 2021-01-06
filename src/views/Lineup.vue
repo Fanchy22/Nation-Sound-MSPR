@@ -1,6 +1,25 @@
 <template>
     <div class="lineup">
-        <h1 class="pb-4 pt-4">Programmation</h1>
+        <h1 class="pb-4 pt-4">Lineup</h1>
+        <b-container class="pb-5">
+            <b-row align-h="center">
+                <b-button variant="dark" style="width: 10vw" class="m-3">All</b-button>
+                <b-button variant="dark" style="width: 10vw" class="m-3">Friday</b-button>
+                <b-button variant="dark" style="width: 10vw" class="m-3">Saturday</b-button>
+                <b-button variant="dark" style="width: 10vw" class="m-3">Sunday</b-button>
+            </b-row>
+            <b-row align-h="center">
+                <b-input-group class="mt-3" style="max-width: 60vw">
+                    <b-input-group-prepend is-text>
+                        <b-icon icon="search"></b-icon>
+                    </b-input-group-prepend>
+                    <b-form-input placeholder="Search for artists, times, places or events"></b-form-input>
+                    <b-input-group-append>
+                        <b-button variant="dark">Search</b-button>
+                    </b-input-group-append>
+                </b-input-group>
+            </b-row>
+        </b-container>
         <b-container>
             <b-row align-h="center">
                 <b-card-group deck id="lineup" v-for="(item, index) in items">
@@ -10,7 +29,7 @@
                             <b-card-title>{{item.artistName}}</b-card-title>
                             <b-card-sub-title>{{item.day}} - {{item.time}}</b-card-sub-title>
                             <b-card-text class="mb-5">{{item.type}} at {{item.place}}</b-card-text>
-                            <a v-b-toggle :href="'#example-collapse'+index" @click.prevent>More</a>
+                            <a v-b-toggle class="text-dark" :href="'#example-collapse'+index" @click.prevent>About</a>
                             <b-collapse :id="'example-collapse'+index">
                                 <div class="card-body">{{item.description}}</div>
                             </b-collapse>
