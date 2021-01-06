@@ -24,8 +24,11 @@ import Menu from '@/components/Menu.vue'
 export default {
 
   components: {
-    Menu// Register your component
+    Menu // Register your component
   },
+  mounted() {
+    this.$i18n.locale = 'de'
+  }
 }
 
 
