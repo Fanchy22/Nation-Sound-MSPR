@@ -1,12 +1,13 @@
 <template>
   <div class="about bg-light h-100">
     <h1>This is an about page</h1>
-      <p>{{ $t('welcome') }}</p> 
-      <p>{{ $t('choose-language') }}</p> 
+      <p>{{ $t('welcome') }}</p>
+      <p>{{ $t('choose-language') }}</p>
   </div>
+
+
+
 </template>
-
-
 
 <i18n>
 {
@@ -26,3 +27,7 @@
   }
 }
 </i18n>
+
+
+
+

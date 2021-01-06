@@ -8,11 +8,30 @@
           </div>
         </header>
 
+<template>
+  <div id="app" class="header">
+    <header>
+      <div class="d-flex flex-row align-items-center">
+        <img src="./assets/logo-white.png" style="height: 10vw;">
+        <H1 class="text-light" style="font-size: 4vw;">NATION SOUND</H1>
+      </div>
+    </header>
+    <Menu></Menu>
+    <router-view/>
+    <select v-model="$i18n.locale" two>
+      <option>FR</option> 
+      <option>EN</option>
+    </select>
+  </div>
+</template>
 
         <router-view/>
 
 
         <footer color="blue" class="footer vw-100 font-small pt-4 mt-4">
+import Menu from '@/components/Menu.vue';
+import Vue from 'vue';
+import VueCountdown from '@chenfengyuan/vue-countdown';
 
               <div class="container">
                 <div class="row">
