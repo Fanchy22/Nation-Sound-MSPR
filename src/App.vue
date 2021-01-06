@@ -1,27 +1,21 @@
 
 <template>
-  <div id="app">
-    <header class="header">
+  <div id="app" class="header">
+    <header>
       <div class="d-flex flex-row align-items-center">
-        <img src="./assets/logo-white.png" style="height: 20vw;">
-        <H1 class="text-light" style="font-size: 7vw;">NATION SOUND</H1>
-        <Menu></Menu>
-      </div>
-      <div class="mt-5">
-      <countdown :time="250 * 24 * 60 * 60 * 1000" class="mt-5" style="color: white; font-size: 7vw; font-family: Poppins;">
-        <template slot-scope="props">{{ props.days }} J {{ props.hours }} H {{ props.minutes }} M {{ props.seconds }} S</template>
-      </countdown>*
+        <img src="./assets/logo-white.png" style="height: 10vw;">
+        <H1 class="text-light" style="font-size: 4vw;">NATION SOUND</H1>
       </div>
     </header>
-
-
+    <Menu></Menu>
     <router-view/>
   </div>
 </template>
 
 <script>
 
-import Menu from '@/components/Menu.vue'
+import Menu from '@/components/Menu.vue';
+
 import Vue from 'vue';
 import VueCountdown from '@chenfengyuan/vue-countdown';
 
@@ -33,7 +27,7 @@ Vue.component(VueCountdown.name, VueCountdown);
 export default {
 
   components: {
-    Menu // Register your component
+    Menu
   },
   mounted() {
     this.$i18n.locale = 'de'

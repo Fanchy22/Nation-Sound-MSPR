@@ -1,6 +1,6 @@
 <template>
-  <div class="Carte">
- CARTE ICI
+  <div class="Carte bg-light h-100">
+    
   </div>
 </template>
 

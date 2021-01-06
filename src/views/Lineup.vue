@@ -1,5 +1,5 @@
 <template>
-    <div class="lineup">
+    <div class="lineup bg-light h-100">
         <h1 class="pb-4 pt-4">Programmation</h1>
         <b-container>
             <b-row align-h="center">
@@ -37,3 +37,7 @@
         }
     }
 </script>
+
+<style>
+
+</style>
