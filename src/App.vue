@@ -9,10 +9,7 @@
     </header>
     <Menu></Menu>
     <router-view/>
-    <select v-model="$i18n.locale" two>
-      <option>FR</option> 
-      <option>EN</option>
-    </select>
+
 
 
         <footer color="blue" class="footer vw-100 font-small pt-4 mt-4">
@@ -75,8 +72,6 @@
     <script>
 
     import Menu from '@/components/Menu.vue'
-
-
 
 
     export default {
