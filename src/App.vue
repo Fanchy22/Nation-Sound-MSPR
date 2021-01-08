@@ -1,31 +1,32 @@
 <template>
 
   <div id="app" class="header">
-    <header>
-      <div class="d-flex flex-row align-items-center">
-        <img src="./assets/logo-white.png" style="height: 10vw;">
-        <H1 class="text-light" style="font-size: 4vw;">NATION SOUND</H1>
-      </div>
-    </header>
-    <Menu></Menu>
-    <router-view/>
-
-
-
-        <footer color="blue" class="footer vw-100 font-small pt-4 mt-4">
-
-              <div class="container">
-                <div class="row">
-
+      <header>
+          <b-navbar style="background-color: black">
+              <b-navbar-brand href="#">
+                  <div class="d-flex flex-row align-items-center">
+                      <img src="./assets/logo-white.png" style="height: 5vw;">
+                      <h1 class="text-light" style="font-size: 2vw; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">NATION SOUND</h1>
+                  </div>
+              </b-navbar-brand>
+              <div class="d-flex flex-row align-items-center">
+                  <Menu></Menu>
+              </div>
+          </b-navbar>
+          <div>
+              <img style="width: 100vw; object-fit: cover;" src="./assets/bg-header.jpeg">
+          </div>
+      </header>
+      <router-view/>
+      <footer class="footer vw-100 font-small pt-4 mt-4">
+          <div class="container">
+              <div class="row">
                   <div class="col">
-
-                  <img src="./assets/logo-gradient.png" style="height: 16vw;">
-
-                </div>
+                      <img src="./assets/logo-gradient.png" style="height: 16vw;">
+                  </div>
                   <div class="col">
-                    <h5 class="title text-primary">Contact</h5>
-
-                  <div class=social>
+                      <h5 class="title text-primary">Contact</h5>
+                      <div class=social>
 
                       <a href="https://www.facebook.com/"><img src="./assets/facebook.png" alt="logo"></a>
                       <a href="https://www.instagram.com/"><img src="./assets/instagram.png" alt="logo"></a>
@@ -107,7 +108,6 @@
    }
 
    .header{
-     background-image: url("./assets/bg-header.jpeg");
      height: 100vh;
      background-size: cover;
    }
