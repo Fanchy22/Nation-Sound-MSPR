@@ -18,14 +18,14 @@
             </b-row>
         </b-container>
         <b-container>
-            <p class="text-secondary">In timetable order</p>
+            <p >In timetable order</p>
             <b-row align-h="center">
                 <b-card-group deck id="lineup" v-for="(item, index) in even(filteredItems)">
                     <b-col>
                         <b-card text-variant="dark" style="width: 20rem;" class="mb-2">
-                            <b-card-img :src='item.artistThumbnail' style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
+                            <b-card-img :src='item.thumbnail' style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
                             <div style="text-align: left" class="mb-5">
-                                <b-card-title>{{item.artistName}}</b-card-title>
+                                <b-card-title>{{item.name}}</b-card-title>
                                 <b-card-sub-title>{{item.day}} - {{item.time}}{{item.timeValue}}</b-card-sub-title>
                                 <b-card-text>{{item.type}} at {{item.place}}</b-card-text>
                             </div>
@@ -48,9 +48,9 @@
             return{
                 searchString: "",
                 items: [
-                    {artistThumbnail: "https://bit.ly/35erni9", artistName: 'Orelsan', day: "Friday", time: "8", timeValue: "PM", place: "Pepsi Tent", type:"Concert", description:"Lorem ispum"},
-                    {artistThumbnail: "https://bit.ly/38j1n7f", artistName: 'David Ghetto', day: "Saturday", time: "11", timeValue: "PM", place: "Mainstage", type:"Concert", description:"Lorem ispum"},
-                    {artistThumbnail: "https://bit.ly/38j1n7f", artistName: 'David Ghetto', day: "Saturday", time: "6", timeValue: "PM", place: "VIP House", type:"Meeting", description:"Lorem ispum"}
+                    {thumbnail: "https://bit.ly/35erni9", name: 'Orelsan', day: "Friday", time: "8", timeValue: "PM", place: "Pepsi Tent", type:"Concert", description:"Lorem ispum"},
+                    {thumbnail: "https://bit.ly/38j1n7f", name: 'David Ghetto', day: "Saturday", time: "11", timeValue: "PM", place: "Mainstage", type:"Concert", description:"Lorem ispum"},
+                    {thumbnail: "https://bit.ly/38j1n7f", name: 'David Ghetto', day: "Saturday", time: "6", timeValue: "PM", place: "VIP House", type:"Meeting", description:"Lorem ispum"}
                 ]
             }
         },
@@ -71,7 +71,7 @@
                 }
                 searchString = searchString.trim().toLowerCase();
                 items_array = items_array.filter(function(item){
-                    if(item.artistName.toLowerCase().indexOf(searchString) !== -1){
+                    if(item.name.toLowerCase().indexOf(searchString) !== -1){
                         return item;
                     }
                     if(item.time.toLowerCase().indexOf(searchString) !== -1){
