@@ -14,7 +14,7 @@
         <b-container>
             <p >In alphabetical order</p>
             <b-row align-h="center">
-                <b-card-group deck id="lineup" v-for="(item, index) in sortFunc(filteredItems)">
+                <b-card-group deck id="lineup" v-for="(item, index) in even(filteredItems)">
                     <b-col>
                         <b-card text-variant="dark" style="width: 20rem;" class="mb-2">
                             <b-card-img :src='item.thumbnail' style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
@@ -50,11 +50,11 @@
             }
         },
         methods: {
-            sortFunc: function (){
-                return this.items.slice().sort(function(a, b){
-                    return (a.name > b.name) ? 1 : -1;
+            even: function(arr) {
+                return arr.slice().sort(function(a, b) {
+                    return a.name > b.name ? 1 : -1;
                 });
-            }
+            },
         },
         computed: {
             filteredItems: function () {
@@ -95,5 +95,5 @@
 </script>
 
 <style>
-
+    
 </style>
