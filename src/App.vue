@@ -13,9 +13,6 @@
                   <Menu></Menu>
               </div>
           </b-navbar>
-          <div>
-              <img style="width: 100vw; object-fit: cover;" src="./assets/bg-header.jpeg">
-          </div>
       </header>
       <router-view/>
       <footer class="footer vw-100 font-small pt-4 mt-4">
