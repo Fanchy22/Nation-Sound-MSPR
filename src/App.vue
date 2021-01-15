@@ -1,16 +1,15 @@
 <template>
   <div id="app" class="header">
       <header>
-          <b-navbar style="background-color: black">
-              <b-navbar-brand href="#">
+          <b-navbar style="background-color: black; min-height: 10vh">
+              <b-navbar-brand href="Home.vue">
                   <div class="d-flex flex-row align-items-center">
-                      <img src="./assets/logo-white.png" style="height: 5vw;">
-                      <h1 class="text-light" style="font-size: 2vw; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">NATION SOUND</h1>
+                      <img src="./assets/logo-white.png" style="height: 5vw; min-height: 10vh">
                   </div>
               </b-navbar-brand>
-              <div class="d-flex flex-row align-items-center">
+              <b-nav-item class="d-flex flex-row align-items-center">
                   <Menu></Menu>
-              </div>
+              </b-nav-item>
           </b-navbar>
       </header>
 
