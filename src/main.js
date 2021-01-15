@@ -13,12 +13,14 @@ import i18n from './i18n'
 
 
 
-
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 //Vue.use(VueI18n);
 
 Vue.config.productionTip = false
+
+
+
 
 
 
