@@ -1,5 +1,4 @@
 <template>
-
   <div id="app" class="header">
       <header>
           <b-navbar style="background-color: black">
@@ -14,7 +13,9 @@
               </div>
           </b-navbar>
       </header>
+
       <router-view/>
+
       <footer class="footer vw-100 font-small pt-4 mt-4">
           <div class="container">
               <div class="row">
@@ -24,139 +25,113 @@
                   <div class="col">
                       <h5 class="title text-primary">Contact</h5>
                       <div class=social>
-
-                      <a href="https://www.facebook.com/"><img src="./assets/facebook.png" alt="logo"></a>
-                      <a href="https://www.instagram.com/"><img src="./assets/instagram.png" alt="logo"></a>
-                      <a href="https://twitter.com/"><img src="./assets/twitter.png" alt="logo"></a>
-
-                    </div>
-
-
+                          <a href="https://www.facebook.com/"><img src="./assets/facebook.png" alt="logo"></a>
+                          <a href="https://www.instagram.com/"><img src="./assets/instagram.png" alt="logo"></a>
+                          <a href="https://twitter.com/"><img src="./assets/twitter.png" alt="logo"></a>
+                      </div>
                   </div>
                   <div class="col">
-                  <div>
-                    <h5 class="title text-primary">Liens pratiques</h5>
-
-                    <ul class="">
-
-                      <li class="list-unstyled"><a href='Home.vue'>Accueil</a></li>
-                      <li class="list-unstyled"><a href="#!">Programmation</a></li>
-                      <li class="list-unstyled"><a href="#!">Billeterie</a></li>
-                      <li class="list-unstyled"><a href='Carte.vue'>Carte</a></li>
-                      <li class="list-unstyled"><a href="#!">Actualité</a></li>
-                      <li class="list-unstyled"><a href="#!">Info & FAQ</a></li>
-
-                    </ul>
-
+                      <div>
+                          <h5 class="title text-primary">Liens pratiques</h5>
+                          <ul>
+                              <li class="list-unstyled"><a href='Home.vue'>Accueil</a></li>
+                              <li class="list-unstyled"><a href="#!">Programmation</a></li>
+                              <li class="list-unstyled"><a href="#!">Billeterie</a></li>
+                              <li class="list-unstyled"><a href='Carte.vue'>Carte</a></li>
+                              <li class="list-unstyled"><a href="#!">Actualité</a></li>
+                              <li class="list-unstyled"><a href="#!">Info & FAQ</a></li>
+                          </ul>
                   </div>
-                </div>
+                  </div>
                   <div class="col">
-                  <h5 class="title text-primary">À propos</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis, eaque earum iure magni minus omnis quos. Eveniet nam nulla tempora. Aliquid delectus esse eveniet inventore ipsa! Libero porro, sed.</p>
+                      <h5 class="title text-primary">À propos</h5>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis, eaque earum iure magni minus omnis quos. Eveniet nam nulla tempora. Aliquid delectus esse eveniet inventore ipsa! Libero porro, sed.</p>
                   </div>
-                </div>
               </div>
-
-              <div class="footer-copyright text-center py-3 text-light">
-                <container fluid>
-                  &copy; 2020 Copyright: Nation Sound </a>
-                </container>
-              </div>
-        </footer>
-
+          </div>
+          <div class="footer-copyright text-center py-3 text-light">
+              <a>&copy; 2020 Copyright: Nation Sound </a>
+          </div>
+      </footer>
   </div>
-    </template>
+</template>
 
-    <script>
-
+<script>
     import Menu from '@/components/Menu.vue'
 
-
     export default {
-
-      components: {
+        components: {
         Menu // Register your component
-      },
-      mounted() {
-        this.$i18n.locale = 'de'
-      }
+        },
+        mounted() {
+            this.$i18n.locale = 'de'
+        }
+    }
+</script>
+
+<style lang="scss">
+    @media (max-width: 850px) {
+        .width-max{
+            width: 100vw;
+        }
     }
 
-
-
-  </script>
-
-
-   <style lang="scss">
-
-   @media (max-width: 850px) {
-     .width-max{
-       width: 100vw;
-     }
-
-   }
-
-   #app {
+    #app {
      font-family: Avenir, Helvetica, Arial, sans-serif;
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
      text-align: center;
      color: #2c3e50;
-   }
+    }
 
-   .header{
+    .header{
      height: 100vh;
      background-size: cover;
-   }
+    }
 
-   .footer {
+    .footer {
      background-color: black;
      box-shadow: 0px 0px 15px 0px;
-   }
+    }
 
-   .social a {
+    .social a {
      padding: 10px;
      justify-content: align-items;
      margin: 10px;
-   }
+    }
 
-
-   ul li a {
-
+    ul li a {
      color: #D3D0CF;
+    }
 
-   }
-
-   p{
+    p{
      color: #D3D0CF;
-   }
+    }
 
-
-   .bm-burger-bars {
+    .bm-burger-bars {
      background-color: #fdfdfe;
-   }
+    }
 
-   #nav {
-     padding: 30px;
+    #nav {
+        padding: 30px;
+        #app {
+            font-family: Avenir, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-align: center;
+            color: #2c3e50;
+        }
+        #nav {
+            padding: 30px;
+        }
 
-     #app {
-       font-family: Avenir, Helvetica, Arial, sans-serif;
-       -webkit-font-smoothing: antialiased;
-       -moz-osx-font-smoothing: grayscale;
-       text-align: center;
-       color: #2c3e50;
-     }
-     #nav {
-       padding: 30px;
-     }
-     a {
-       font-weight: bold;
-       color: #2c3e50;
-       margin-bottom: 30px;
-       &.router-link-exact-active {
-         color: #42b983;
-       }
-     }
-   }
-
-   </style>
+        a {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            &.router-link-exact-active {
+                color: #42b983;
+            }
+        }
+    }
+</style>
