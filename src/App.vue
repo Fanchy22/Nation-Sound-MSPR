@@ -16,41 +16,41 @@
 
       <router-view/>
 
-      <footer class="footer vw-100 font-small pt-4 mt-4">
+      <footer class="footer vw-100 font-small">
           <div class="container">
-              <div class="row">
+              <div class="row pt-4">
                   <div class="col">
-                      <img src="./assets/logo-gradient.png" style="height: 16vw;">
+                      <img src="./assets/logo-white.png" style="height: 16vw;">
                   </div>
                   <div class="col">
-                      <h5 class="title text-primary">Contact</h5>
+                      <div>
+                          <ul>
+                              <h5 class="title text-white">Liens pratiques</h5>
+                              <li class="list-unstyled"><a href='Home.vue'>Accueil</a></li>
+                              <li class="list-unstyled"><a href="Lineup.vue">Programmation</a></li>
+                              <li class="list-unstyled"><a href="#!">Billeterie</a></li>
+                              <li class="list-unstyled"><a href='Carte.vue'>Carte</a></li>
+                              <li class="list-unstyled"><a href="#!">Actualité</a></li>
+                              <li class="list-unstyled"><a href="#!">Info & FAQ</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <h5 class="title text-white">À propos</h5>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis, eaque earum iure magni minus omnis quos. Eveniet nam nulla tempora. Aliquid delectus esse eveniet inventore ipsa! Libero porro, sed.</p>
+                  </div>
+                  <div class="col">
+                      <h5 class="title text-white">Contact</h5>
                       <div class=social>
                           <a href="https://www.facebook.com/"><img src="./assets/facebook.png" alt="logo"></a>
                           <a href="https://www.instagram.com/"><img src="./assets/instagram.png" alt="logo"></a>
                           <a href="https://twitter.com/"><img src="./assets/twitter.png" alt="logo"></a>
                       </div>
                   </div>
-                  <div class="col">
-                      <div>
-                          <h5 class="title text-primary">Liens pratiques</h5>
-                          <ul>
-                              <li class="list-unstyled"><a href='Home.vue'>Accueil</a></li>
-                              <li class="list-unstyled"><a href="#!">Programmation</a></li>
-                              <li class="list-unstyled"><a href="#!">Billeterie</a></li>
-                              <li class="list-unstyled"><a href='Carte.vue'>Carte</a></li>
-                              <li class="list-unstyled"><a href="#!">Actualité</a></li>
-                              <li class="list-unstyled"><a href="#!">Info & FAQ</a></li>
-                          </ul>
-                  </div>
-                  </div>
-                  <div class="col">
-                      <h5 class="title text-primary">À propos</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis, eaque earum iure magni minus omnis quos. Eveniet nam nulla tempora. Aliquid delectus esse eveniet inventore ipsa! Libero porro, sed.</p>
-                  </div>
               </div>
           </div>
           <div class="footer-copyright text-center py-3 text-light">
-              <a>&copy; 2020 Copyright: Nation Sound </a>
+              <a>&copy;2020 Copyright : Nation Sound</a>
           </div>
       </footer>
   </div>
@@ -91,7 +91,6 @@
 
     .footer {
      background-color: black;
-     box-shadow: 0px 0px 15px 0px;
     }
 
     .social a {
