@@ -13,32 +13,29 @@
           </b-navbar>
       </header>
 
-      <router-view/>
+      <div class="page-wrapper">
+          <router-view/>
+      </div>
 
-      <footer class="footer vw-100 font-small">
-          <div class="container">
-              <div class="row pt-4">
-                  <div class="col">
-                      <img src="./assets/logo-white.png" style="height: 16vw;">
+      <b-navbar class="footer" style="background-color: black; min-height: 10vh">
+          <div class="footer-content">
+              <b-row class="align-middle">
+                  <div class="col-lg-4">
+                      <ul style="padding-left: unset">
+                          <h5 class="title text-white">Liens pratiques</h5>
+                          <li class="list-unstyled"><a href='Home.vue'>Accueil</a></li>
+                          <li class="list-unstyled"><a href="Lineup.vue">Programmation</a></li>
+                          <li class="list-unstyled"><a href="Tickets.vue">Billeterie</a></li>
+                          <li class="list-unstyled"><a href='Carte.vue'>Carte</a></li>
+                          <li class="list-unstyled"><a href="#!">Actualité</a></li>
+                          <li class="list-unstyled"><a href="#!">Info & FAQ</a></li>
+                      </ul>
                   </div>
-                  <div class="col">
-                      <div>
-                          <ul>
-                              <h5 class="title text-white">Liens pratiques</h5>
-                              <li class="list-unstyled"><a href='Home.vue'>Accueil</a></li>
-                              <li class="list-unstyled"><a href="Lineup.vue">Programmation</a></li>
-                              <li class="list-unstyled"><a href="Tickets.vue">Billeterie</a></li>
-                              <li class="list-unstyled"><a href='Carte.vue'>Carte</a></li>
-                              <li class="list-unstyled"><a href="#!">Actualité</a></li>
-                              <li class="list-unstyled"><a href="#!">Info & FAQ</a></li>
-                          </ul>
-                      </div>
-                  </div>
-                  <div class="col">
+                  <div class="col-lg-4">
                       <h5 class="title text-white">À propos</h5>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis, eaque earum iure magni minus omnis quos. Eveniet nam nulla tempora. Aliquid delectus esse eveniet inventore ipsa! Libero porro, sed.</p>
                   </div>
-                  <div class="col">
+                  <div class="col-lg-4 ">
                       <h5 class="title text-white">Contact</h5>
                       <div class=social>
                           <a href="https://www.facebook.com/"><img src="./assets/facebook.png" alt="logo"></a>
@@ -46,12 +43,14 @@
                           <a href="https://twitter.com/"><img src="./assets/twitter.png" alt="logo"></a>
                       </div>
                   </div>
-              </div>
+              </b-row>
+              <b-row>
+                  <div class="footer-copyright text-center py-3  text-light">
+                      <a>&copy;2020 Copyright : Nation Sound Festival</a>
+                  </div>
+              </b-row>
           </div>
-          <div class="footer-copyright text-center py-3 text-light">
-              <a>&copy;2020 Copyright : Nation Sound</a>
-          </div>
-      </footer>
+      </b-navbar>
   </div>
 </template>
 
@@ -69,6 +68,7 @@
 </script>
 
 <style lang="scss">
+
     @media (max-width: 850px) {
         .width-max{
             width: 100vw;
@@ -76,20 +76,47 @@
     }
 
     #app {
-     font-family: Avenir, Helvetica, Arial, sans-serif;
-     -webkit-font-smoothing: antialiased;
-     -moz-osx-font-smoothing: grayscale;
-     text-align: center;
-     color: #2c3e50;
+         font-family: Avenir, Helvetica, Arial, sans-serif;
+         -webkit-font-smoothing: antialiased;
+         -moz-osx-font-smoothing: grayscale;
+         text-align: center;
+         color: #2c3e50;
+    }
+
+    .page-wrapper{
+        min-height: 100%;
+        background-color: #F8F9FA;
+        padding-bottom: 40px;
     }
 
     .header{
-     height: 100vh;
-     background-size: cover;
+        height: 100vh;
+        background-size: cover;
     }
 
     .footer {
-     background-color: black;
+        background-color: black;
+        color: white;
+        min-height: 40vh;
+        position: relative;
+    }
+
+    .footer-content{
+        margin-top: 6vh;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .align-middle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-copyright{
+        padding-top: 2vh;
+        height: 8vh;
+        width: 100%;
     }
 
     .social a {
@@ -99,15 +126,15 @@
     }
 
     ul li a {
-     color: #D3D0CF;
+        color: #D3D0CF;
     }
 
     p{
-     color: #D3D0CF;
+         color: #D3D0CF;
     }
 
     .bm-burger-bars {
-     background-color: #fdfdfe;
+        background-color: #fdfdfe;
     }
 
     #nav {

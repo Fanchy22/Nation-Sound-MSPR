@@ -9,7 +9,7 @@
             </div>
             <div style="position: absolute; bottom:0; margin: auto; width: 100vw; text-align:center; padding-bottom: 3vh;">
                 <p>En savoir plus</p>
-                <b-button class="btn-light" style="border-radius: 30px;" @click="scrollToElement"><i class="arrow down"></i></b-button>
+                <b-button class="btn-light btn-move" style="border-radius: 30px;" @click="scrollToElement"><i class="arrow down"></i></b-button>
             </div>
         </div>
         <b-row class="information" style="margin: unset!important;">
@@ -65,6 +65,9 @@ export default {
         color: white;
         font-size: 20px;
         border: none;
+    }
+
+    .btn-move{
         animation: updown 2s ease infinite;
     }
 
