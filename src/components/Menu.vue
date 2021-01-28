@@ -28,7 +28,7 @@ import { Slide } from 'vue-burger-menu'
 <style>
 
     .menu-item{
-        margin-right: 100px;
+        margin-right: 60px;
     }
 
     .bm-menu{
