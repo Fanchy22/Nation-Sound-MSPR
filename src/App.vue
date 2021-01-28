@@ -27,7 +27,7 @@
                               <h5 class="title text-white">Liens pratiques</h5>
                               <li class="list-unstyled"><a href='Home.vue'>Accueil</a></li>
                               <li class="list-unstyled"><a href="Lineup.vue">Programmation</a></li>
-                              <li class="list-unstyled"><a href="#!">Billeterie</a></li>
+                              <li class="list-unstyled"><a href="Tickets.vue">Billeterie</a></li>
                               <li class="list-unstyled"><a href='Carte.vue'>Carte</a></li>
                               <li class="list-unstyled"><a href="#!">Actualité</a></li>
                               <li class="list-unstyled"><a href="#!">Info & FAQ</a></li>
