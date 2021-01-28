@@ -8,6 +8,15 @@
                 </countdown>
             </div>
         </div>
+        <b-row>
+            <b-container>
+                <h1 class="pb-4 pt-4" style="font-size: 2.5rem">Titre</h1>
+                <div style="text-align: left">
+                    <h2 class="pb-2 pt-2" style="font-size: 1.5rem">Sous-titre 1</h2>
+                    <p>Texte</p>
+                </div>
+            </b-container>
+        </b-row>
     </div>
 </div>
 
@@ -30,7 +39,7 @@ export default {
 <style>
     #countdown{
         background-image: url("../assets/bg-header.jpeg");
-        height: 100vh;
+        height: 80vh;
         width: 100vw;
         object-fit: cover;
     }

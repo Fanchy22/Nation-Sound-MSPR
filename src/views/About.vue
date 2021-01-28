@@ -1,12 +1,7 @@
 <template>
-  <div class="about bg-light h-100">
-    <h1>This is an about page</h1>
-      <p>{{ $t('welcome') }}</p>
-      <p>{{ $t('choose-language') }}</p>
-  </div>
-
-
-
+    <div class="about bg-light h-100">
+        <h1 class="pb-4 pt-4" style="font-size: 2.5rem">Informations</h1>
+    </div>
 </template>
 
 <i18n>
