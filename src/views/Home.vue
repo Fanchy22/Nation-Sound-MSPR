@@ -14,7 +14,7 @@
         </div>
         <b-row class="information" style="margin: unset!important;">
             <b-container style="padding: 5vw">
-                <h1 class="pb-4 pt-4" style="font-size: 2.5rem">Titre</h1>
+                <h1 style="font-size: 2.5rem">Titre</h1>
                 <div style="text-align: left">
                     <h2 class="pb-2 pt-2" style="font-size: 1.5rem">Sous-titre 1</h2>
                     <p class="text-dark">Texte</p>

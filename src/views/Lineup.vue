@@ -1,9 +1,9 @@
 <template>
     <div class="lineup bg-light h-100">
-        <h1 class="pb-4 pt-4" style="font-size: 2.5rem">Programmation</h1>
+        <h1 style="font-size: 2.5rem">Programmation</h1>
         <b-container class="pb-5">
             <b-row align-h="center" class="pt-2">
-                <b-input-group class="mt-3" style="width: 40vw">
+                <b-input-group style="width: 40vw">
                     <b-input-group-prepend is-text>
                         <b-icon icon="search"></b-icon>
                     </b-input-group-prepend>
