@@ -30,7 +30,7 @@ export default {
 <style>
     #countdown{
         background-image: url("../assets/bg-header.jpeg");
-        height: 80vh;
+        height: 100vh;
         width: 100vw;
         object-fit: cover;
     }
