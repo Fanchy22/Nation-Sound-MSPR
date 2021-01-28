@@ -9,10 +9,10 @@
             </div>
             <div style="position: absolute; bottom:0; margin: auto; width: 100vw; text-align:center; padding-bottom: 3vh;">
                 <p>En savoir plus</p>
-                <b-button class="btn-light btn-move" style="border-radius: 30px;" @click="scrollToElement"><i class="arrow down"></i></b-button>
+                <b-button class="btn-light btn-move" style="border-radius: 30px;" v-scroll-to="'#informations'"><i class="arrow down"></i></b-button>
             </div>
         </div>
-        <b-row class="information" style="margin: unset!important;">
+        <b-row id="informations" style="margin: unset!important;">
             <b-container style="padding: 5vw">
                 <h1 style="font-size: 2.5rem">Titre</h1>
                 <div style="text-align: left">
@@ -28,25 +28,17 @@
 
 <script>
     import Vue from 'vue';
-import VueCountdown from '@chenfengyuan/vue-countdown';
+    import VueCountdown from '@chenfengyuan/vue-countdown';
 
 Vue.component(VueCountdown.name, VueCountdown);
 
+    const VueScrollTo = require('vue-scrollto');
+    Vue.use(VueScrollTo);
+
 export default {
   name: 'Home',
-    methods: {
-        scrollToElement() {
-            const el = this.$el.getElementsByClassName('information')[0];
-            if (el) {
-                // Use el.scrollIntoView() to instantly scroll to the element
-                el.scrollIntoView({behavior: 'smooth'});
-            }
-        }
-    },
-    mounted() {
-        this.scrollToElement();
-    }
 }
+
 </script>
 
 <style>
