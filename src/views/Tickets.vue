@@ -1,6 +1,6 @@
 <template>
     <div class="tickets bg-light h-100">
-        <h1 class="pb-4 pt-4">Billeterie</h1>
+        <h1 class="pb-4 pt-4" style="font-size: 2.5rem">Billeterie</h1>
         <b-container class="pb-5">
             <div class="yurplan-widget-container">
                 <iframe
