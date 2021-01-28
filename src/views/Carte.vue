@@ -1,10 +1,7 @@
 <template>
   <div class="Carte bg-light h-100">
 
-    <h1>{{ $t('map') }}</h1>
-
-
-
+    <h1 class="pb-4 pt-4 >{{ $t('map') }}</h1>
     <div>
       <b-card no-body class="w-75 m-auto">
         <b-row no-gutters>

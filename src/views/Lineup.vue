@@ -1,6 +1,6 @@
 <template>
     <div class="lineup bg-light h-100">
-        <h1 class="pb-4 pt-4">Lineup</h1>
+        <h1 class="pb-4 pt-4">Programmation</h1>
         <b-container class="pb-5">
             <b-row align-h="center" class="pt-2">
                 <b-input-group class="mt-3" style="width: 40vw">
