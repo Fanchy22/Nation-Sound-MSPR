@@ -7,7 +7,7 @@
                     <b-row no-gutters>
                         <b-col md="6">
                             <MglMap class="mgl-map-wrapper rounded-0" :accessToken=accessToken :mapStyle=mapStyle @load="onMapLoaded">
-                                <MglNavigationControl style="fill: black" position="top-right"/>
+                                <MglNavigationControl position="top-right"/>
                                 <MglGeolocateControl position="top-right" />
                             </MglMap>
                         </b-col>
