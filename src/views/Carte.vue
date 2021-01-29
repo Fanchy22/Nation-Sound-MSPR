@@ -6,7 +6,10 @@
                 <b-card no-body class="overflow-hidden col-md-12" text-variant="dark" style="padding: unset; height: 60vh">
                     <b-row no-gutters>
                         <b-col md="6">
-                            <MglMap class="mgl-map-wrapper rounded-0" :accessToken=accessToken :mapStyle=mapStyle @load="onMapLoaded" />
+                            <MglMap class="mgl-map-wrapper rounded-0" :accessToken=accessToken :mapStyle=mapStyle @load="onMapLoaded">
+                                <MglNavigationControl style="fill: black" position="top-right"/>
+                                <MglGeolocateControl position="top-right" />
+                            </MglMap>
                         </b-col>
                         <b-col md="6">
                             <h2 class="pb-2 pt-4" style="font-size: 1.5rem">Lieux clés</h2>
@@ -22,12 +25,15 @@
 </template>
 
 <script>
-    import { MglMap } from "vue-mapbox";
+    import { MglMap, MglNavigationControl, MglGeolocateControl } from "vue-mapbox";
+    import "mapbox-gl/dist/mapbox-gl.css"
 
     export default {
         name: 'Carte',
         components: {
-            MglMap
+            MglMap,
+            MglNavigationControl,
+            MglGeolocateControl,
         },
         data() {
             return {
@@ -52,7 +58,7 @@
 <style>
 
     .mgl-map-wrapper{
-        height: 50rem;
+        height: 29.5rem;
     }
 
     h1{
