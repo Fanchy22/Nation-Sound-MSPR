@@ -2,10 +2,14 @@
 <div>
     <div>
         <div id="countdown">
-            <div style="padding-top: 28vh;">
-                <countdown :time="250 * 24 * 60 * 60 * 1000" style="color: white; font-size: 7vw; font-family: Poppins;">
-                    <template slot-scope="props">{{ props.days }} J | {{ props.hours }} H | {{ props.minutes }} M | {{ props.seconds }} S</template>
-                </countdown>
+            <div style="padding-top: 25vh; padding-left: 2.5vw; padding-right: .5vw" class="align-middle">
+                <b-card id="countdown-card" class="col-md-6">
+                    <h1 style="font-size: 2.3rem; margin: unset!important; padding: unset!important; color: white">Nation Sound Festival</h1>
+                    <p style="color: white">9 - 12 Juillet 2021 | Hippodrome de Paris Longchamp</p>
+                    <countdown :time="250 * 24 * 60 * 60 * 1000" style="font-size: 2.3rem; color: white; font-family: Poppins;">
+                        <template slot-scope="props">{{ props.days }} J | {{ props.hours }} H | {{ props.minutes }} M | {{ props.seconds }} S</template>
+                    </countdown>
+                </b-card>
             </div>
             <div style="position: absolute; bottom:0; margin: auto; width: 100vw; text-align:center; padding-bottom: 3vh;">
                 <p>En savoir plus</p>
@@ -42,6 +46,11 @@ export default {
 </script>
 
 <style>
+    #countdown-card{
+        border: unset;
+        background-color: unset;
+    }
+
     #countdown{
         background-image: url("../assets/bg-header.jpg");
         background-position-x: center;
