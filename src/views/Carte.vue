@@ -5,18 +5,10 @@
             <b-row align-h="center" class="pt-2">
                 <b-card no-body class="overflow-hidden col-md-12" text-variant="dark" style="padding: unset; height: 60vh">
                     <b-row no-gutters>
-                        <b-col md="6">
-                            <MglMap class="mgl-map-wrapper rounded-0" :accessToken=accessToken :mapStyle=mapStyle @load="onMapLoaded">
-                                <MglNavigationControl position="top-right"/>
-                                <MglGeolocateControl position="top-right" />
-                            </MglMap>
-                        </b-col>
-                        <b-col md="6">
-                            <h2 class="pb-2 pt-4" style="font-size: 1.5rem">Lieux clés</h2>
-                            <b-card-text>
-                                <p class="text-dark">Élément 1</p>
-                            </b-card-text>
-                        </b-col>
+                        <MglMap class="mgl-map-wrapper rounded-0" :accessToken=accessToken :mapStyle=mapStyle @load="onMapLoaded">
+                            <MglNavigationControl position="top-right"/>
+                            <MglGeolocateControl position="top-right" />
+                        </MglMap>
                     </b-row>
                 </b-card>
             </b-row>
@@ -58,7 +50,7 @@
 <style>
 
     .mgl-map-wrapper{
-        height: 29.5rem;
+        height: 60vh;
     }
 
     h1{
