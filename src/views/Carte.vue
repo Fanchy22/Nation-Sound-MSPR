@@ -1,6 +1,6 @@
 <template>
-    <div class="carte bg-light h-100" style="padding: 5vw">
-        <h1>Carte du festival</h1>
+    <div class="map bg-light h-100" style="padding: 5vw">
+        <h1>Carte</h1>
         <b-container>
             <b-row align-h="center" class="pb-5">
                 <b-card no-body class="overflow-hidden col-md-12" text-variant="dark" style="padding: unset; height: 60vh">

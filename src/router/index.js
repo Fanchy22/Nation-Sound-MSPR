@@ -5,6 +5,7 @@ import Carte from '../views/Carte.vue'
 import Lineup from '../views/Lineup.vue'
 import Tickets from '../views/Tickets.vue'
 import About from '../views/About.vue'
+import Contact from '../views/Contact.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About 
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
   }
 ];
 

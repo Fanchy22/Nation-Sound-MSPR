@@ -6,6 +6,7 @@
             <router-link to="/Tickets" class="menu-item text-light">Billetterie</router-link>
             <router-link to="/Carte" class="menu-item text-light">Carte</router-link>
             <router-link to="/About" class="menu-item text-light">Informations</router-link>
+            <router-link to="/Contact" class="menu-item text-light">Contact</router-link>
             <select v-model="$i18n.locale" two>
                 <option>FR</option>
                 <option>EN</option>
