@@ -3,7 +3,7 @@
         <h1>Programmation</h1>
         <b-container>
             <b-row align-h="center" class="pb-5">
-                <b-input-group style="min-width: 40vw; max-width: 75vw">
+                <b-input-group style="width: 40vw">
                     <b-input-group-prepend is-text>
                         <b-icon icon="search"></b-icon>
                     </b-input-group-prepend>
@@ -11,18 +11,17 @@
                 </b-input-group>
             </b-row>
         </b-container>
-        <b-container>
             <p>En ordre alphabétique</p>
             <b-row align-h="center">
-                <b-card-group deck id="lineup" v-for="(item, index) in even(filteredItems)">
+                <b-card-group class="col-md-3" deck id="lineup" v-for="(item, index) in even(filteredItems)">
                     <b-col>
-                        <b-card text-variant="dark" style="width: 21rem;" class="mb-2">
+                        <b-card text-variant="dark" class="mb-2">
                             <b-card-img :src='item.thumbnail' style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
                             <div style="text-align: left" class="mb-3">
                                 <b-card-title style="margin-bottom: 0">{{item.name}}</b-card-title>
-                                <b-card-text>{{item.genre}}</b-card-text>
+                                <b-card-text>{{item.genre}} - {{item.type}} </b-card-text>
                                 <b-card-sub-title>{{item.day}} - {{item.time}}{{item.timeValue}}</b-card-sub-title>
-                                <b-card-text>{{item.type}} at {{item.place}}</b-card-text>
+                                <b-card-text>{{item.place}}</b-card-text>
                             </div>
                             <b-button v-b-toggle style="text-align: center; width: 100%" class="btn-light" :href="'#example-collapse'+index" @click.prevent>En savoir plus</b-button>
                             <b-collapse :id="'example-collapse'+index">
@@ -32,7 +31,6 @@
                     </b-col>
                 </b-card-group>
             </b-row>
-        </b-container>
     </div>
 </template>
 
@@ -43,9 +41,10 @@
             return{
                 searchString: "",
                 items: [
-                    {thumbnail: "https://bit.ly/35erni9", name: 'Orelsan', genre: 'Rap', day: "Friday", time: "8", timeValue: "PM", place: "Pepsi Tent", type:"Concert", description:"Lorem ispum"},
-                    {thumbnail: "https://bit.ly/38j1n7f", name: 'David Ghetto', genre: 'EDM', day: "Saturday", time: "11", timeValue: "PM", place: "Mainstage", type:"Concert", description:"Lorem ispum"},
-                    {thumbnail: "https://bit.ly/38j1n7f", name: 'David Ghetto', genre: 'EDM', day: "Saturday", time: "6", timeValue: "PM", place: "VIP House", type:"Meeting", description:"Lorem ispum"}
+                    {thumbnail: "https://bit.ly/35erni9", name: 'Orelsan', genre: 'Rap', day: "Friday", time: "8", timeValue: "PM", place: "Urban Arena", type:"Concert", description:"Lorem ispum"},
+                    {thumbnail: "https://bit.ly/38j1n7f", name: 'David Ghetto', genre: 'EDM', day: "Saturday", time: "11", timeValue: "PM", place: "Arc Stage", type:"Concert", description:"Lorem ispum"},
+                    {thumbnail: "https://bit.ly/38j1n7f", name: 'David Ghetto', genre: 'EDM', day: "Saturday", time: "6", timeValue: "PM", place: "Gold Room", type:"Meeting", description:"Lorem ispum"},
+                    {thumbnail: "https://bit.ly/3aqzoTc", name: 'Arctic Monkeys', genre: 'Rock', day: "Saturday", time: "6", timeValue: "PM", place: "San Miguel® Arena", type:"Concert", description:"Lorem ispum"}
                 ]
             }
         },
