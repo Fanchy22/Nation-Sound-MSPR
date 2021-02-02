@@ -3,7 +3,7 @@
         <h1>Informations & FAQ</h1>
         <b-container>
             <b-row class="infos-left pb-5">
-                <b-img class="pb-2" :src='"https://bit.ly/35erni9"' style="float: left; height: 20vh; width: 100%; object-fit: cover;"></b-img>
+                <b-img class="pb-2" :src='"https://bit.ly/2YR7ZEF"' style="float: left; height: 20vh; width: 100%; object-fit: cover;"></b-img>
                 <div style="float: left">
                     <div style="text-align: left; max-width: unset!important;">
                         <h2 class="pb-2 pt-2" style="font-size: 1.5rem">Lorem ipsum</h2>
@@ -12,7 +12,6 @@
                 </div>
             </b-row>
         </b-container>
-
     </div>
 </template>
 
