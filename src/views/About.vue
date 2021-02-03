@@ -19,11 +19,13 @@
                     <h2 style="font-size: 1.5rem">FAQ</h2>
                     <p>Questions les plus souvent posées</p>
                 </div>
-
                 <div class="accordion col-md-12 mb-3" role="tablist" v-for="(faq, index) in faqs">
                     <b-card no-body class="mb-1">
                         <b-card-header header-tag="header" class="p-1 dark" role="tab">
-                            <b-button block v-b-toggle="'accordion-'+index" @click.prevent variant="dark" style="font-weight: 600; text-align: left!important" >{{faq.question}}</b-button>
+                            <b-button block v-b-toggle="'accordion-'+index" @click.prevent variant="light" style="font-weight: 600; text-align: left!important">
+                                {{faq.question}}
+                                <b-icon style="transform: rotate(90deg); margin-top: 4px;" class="float-right caret" icon="caret-right-fill" variant="dark" font-scale="0.9"></b-icon>
+                            </b-button>
                         </b-card-header>
                         <b-collapse :id="'accordion-'+index" accordion="my-accordion" role="tabpanel">
                             <b-card-body>
@@ -31,6 +33,10 @@
                             </b-card-body>
                         </b-collapse>
                     </b-card>
+                </div>
+                <div class="pt-4 mx-auto" style="justify-content: center">
+                    <p>Vous ne trouvez pas la réponse à votre question ici ?</p>
+                    <b-button class="btn-dark" style="margin-right: 1vw" to="/Contact">Poser ma question</b-button>
                 </div>
             </b-row>
         </b-container>
@@ -53,17 +59,11 @@
                     {question: 'Q4', answer: 'A4'},
                 ]
             }
-        }
+        },
     }
 </script>
 
 <style>
-
-    .accordion button:hover{
-        background-color: #000000!important;
-        color: white!important;
-    }
-
 </style>
 
 
