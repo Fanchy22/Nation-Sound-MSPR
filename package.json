@@ -11,6 +11,7 @@
     "@chenfengyuan/vue-countdown": "^1.1.5",
     "@mapbox/mapbox-gl-geocoder": "^4.7.0",
     "@studiometa/vue-mapbox-gl": "^1.4.6",
+    "blocks-alerter": "^1.2.1",
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.21.2",
     "colorette": "^1.2.1",
