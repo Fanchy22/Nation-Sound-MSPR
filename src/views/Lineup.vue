@@ -10,23 +10,22 @@
                     <b-form-input v-model="searchString" placeholder="Recherchez des artistes, genres, jours, lieux ou événements"></b-form-input>
                 </b-input-group>
             </b-row>
-            <pre>{{artiste}}</pre>
         </b-container>
         <p>Par ordre alphabétique</p>
         <b-row class="justify-content-center">
-            <b-card-group class="col-md-4 mb-4" deck id="news" v-for="(artiste, index) in even(filteredArtists)">
+            <b-card-group class="col-md-4 mb-4" deck id="news" v-for="(artist, index) in artiste">
                 <b-col style="padding: unset!important;">
                     <b-card text-variant="dark" class="mb-2">
-                        <b-card-img :src='artiste.thumbnail' style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
+                        <b-card-img :sr="'https://wis3.etu.epsi-nantes.fr/MSPR-Nation-Sound-back/public/index.php/' + artist.thumbnail" style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
                         <div style="text-align: left" class="mb-3">
-                            <b-card-title style="margin-bottom: 0">{{artiste.name}}</b-card-title>
-                            <b-card-text>{{artiste.genre}} - {{artist.type}} </b-card-text>
-                            <b-card-sub-title>{{artist.day}} - {{artist.time}}{{artist.timeValue}}</b-card-sub-title>
-                            <b-card-text>{{artist.place}}</b-card-text>
+                            <b-card-title style="margin-bottom: 0">{{artist.name}}</b-card-title>
+                            <b-card-text>{{artist.genre}} - {{artist.type}} </b-card-text>
+                            <b-card-sub-title>{{artiste.day}} - {{artiste.time}}{{artiste.timeValue}}</b-card-sub-title>
+                            <b-card-text>{{artiste.place}}</b-card-text>
                         </div>
                         <b-button v-b-toggle style="text-align: center; width: 100%" class="btn-light" :href="'#example-collapse'+index" @click.prevent>En savoir plus</b-button>
                         <b-collapse :id="'example-collapse'+index">
-                            <div class="card-body">{{artist.description}}</div>
+                            <div class="card-body">{{artiste.description}}</div>
                         </b-collapse>
                     </b-card>
                 </b-col>
@@ -52,10 +51,13 @@
             }
         },
         mounted(){
-            axios.get('https://wis3.etu.epsi-nantes.fr/MSPR-Nation-Sound-back/public/index.php/api/artiste').then(response =>
-                this.artiste = response.data["hydra:member"])
+            axios.get('https://wis3.etu.epsi-nantes.fr/MSPR-Nation-Sound-back/public/index.php/api/artiste')
+                .then(response => {
+                    // JSON responses are automatically parsed.
+                    this.artiste = response.data
+                })
         },
-        methods: {
+        /*methods: {
             even: function(arr) {
                 return arr.slice().sort(function(a, b) {
                     return a.name > b.name ? 1 : -1;
@@ -96,7 +98,8 @@
                 });
                 return artists_array;
             }
-        }
+        }*/
+    /*in even(filteredArtists)*/
     }
 </script>
 

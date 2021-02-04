@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "webdriver-update": "webdriver-manager update",
+    "server": "webpack-dashboard -- webpack-dev-server --inline --port 8080",
+    "dev": "nodemon server.js",
+    "start": "webpack-dev-server --open --config webpack/webpack.config.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
@@ -38,9 +42,11 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "node-sass": "^4.12.0",
+    "@types/core-js": "^0.9.0",
     "sass-loader": "^8.0.2",
+    "sw-precache-webpack-plugin": "^1.0.0",
     "vue-cli-plugin-i18n": "~1.0.1",
     "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.44.2"
+    "webpack": "^4.46.0"
   }
 }
