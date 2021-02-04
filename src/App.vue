@@ -134,7 +134,6 @@
         color: white;
         min-height: 40vh;
         position: relative;
-        box-shadow: 10px 10px 10px 10px black;
     }
 
     .footer-content{
