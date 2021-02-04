@@ -10,16 +10,17 @@
                     <b-form-input v-model="searchString" placeholder="Recherchez des artistes, genres, jours, lieux ou événements"></b-form-input>
                 </b-input-group>
             </b-row>
+            <pre>{{artiste}}</pre>
         </b-container>
         <p>Par ordre alphabétique</p>
         <b-row class="justify-content-center">
-            <b-card-group class="col-md-4 mb-4" deck id="news" v-for="(artist, index) in even(filteredArtists)">
+            <b-card-group class="col-md-4 mb-4" deck id="news" v-for="(artiste, index) in even(filteredArtists)">
                 <b-col style="padding: unset!important;">
                     <b-card text-variant="dark" class="mb-2">
-                        <b-card-img :src='artist.thumbnail' style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
+                        <b-card-img :src='artiste.thumbnail' style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
                         <div style="text-align: left" class="mb-3">
-                            <b-card-title style="margin-bottom: 0">{{artist.name}}</b-card-title>
-                            <b-card-text>{{artist.genre}} - {{artist.type}} </b-card-text>
+                            <b-card-title style="margin-bottom: 0">{{artiste.name}}</b-card-title>
+                            <b-card-text>{{artiste.genre}} - {{artist.type}} </b-card-text>
                             <b-card-sub-title>{{artist.day}} - {{artist.time}}{{artist.timeValue}}</b-card-sub-title>
                             <b-card-text>{{artist.place}}</b-card-text>
                         </div>
@@ -35,18 +36,24 @@
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
         name: 'Lineup',
         data() {
             return{
                 searchString: "",
-                artists: [
+                artiste: [],
+                /*artists: [
                     {thumbnail: "https://bit.ly/35erni9", name: 'Orelsan', genre: 'Rap', day: "Friday", time: "8", timeValue: "PM", place: "Urban Arena", type:"Concert", description:"Lorem ispum"},
                     {thumbnail: "https://bit.ly/38j1n7f", name: 'David Ghetto', genre: 'EDM', day: "Saturday", time: "11", timeValue: "PM", place: "Arc Stage", type:"Concert", description:"Lorem ispum"},
                     {thumbnail: "https://bit.ly/38j1n7f", name: 'David Ghetto', genre: 'EDM', day: "Saturday", time: "6", timeValue: "PM", place: "Gold Room", type:"Meeting", description:"Lorem ispum"},
                     {thumbnail: "https://bit.ly/3aqzoTc", name: 'Arctic Monkeys', genre: 'Rock', day: "Saturday", time: "6", timeValue: "PM", place: "San Miguel® Arena", type:"Concert", description:"Lorem ispum"}
-                ]
+                ]*/
             }
+        },
+        mounted(){
+            axios.get('https://wis3.etu.epsi-nantes.fr/MSPR-Nation-Sound-back/public/index.php/api/artiste').then(response =>
+                this.artiste = response.data["hydra:member"])
         },
         methods: {
             even: function(arr) {
@@ -57,7 +64,7 @@
         },
         computed: {
             filteredArtists: function () {
-                let artists_array = this.artists,
+                let artists_array = this.artiste,
                     searchString = this.searchString;
 
                 if(!searchString){
