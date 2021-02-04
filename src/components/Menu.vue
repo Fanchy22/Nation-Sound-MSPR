@@ -1,15 +1,21 @@
 <template>
     <slide right>
-        <div id="nav" class="row ml-4 mr-4">
-            <router-link to="/" class="menu-item text-light">Accueil</router-link>
-            <router-link to="/Lineup" class="menu-item text-light">Programmation</router-link>
-            <router-link to="/Tickets" class="menu-item text-light">Billetterie</router-link>
-            <router-link to="/Carte" class="menu-item text-light">Carte</router-link>
-            <router-link to="/About" class="menu-item text-light">Informations</router-link>
-            <select v-model="$i18n.locale" two>
-                <option>FR</option>
-                <option>EN</option>
-            </select>
+        <div id="nav" class="row" style="width: 15vw">
+            <b-row>
+                <router-link to="/" class="menu-item text-light">Accueil</router-link>
+                <router-link to="/Lineup" class="menu-item text-light">Programmation</router-link>
+                <router-link to="/Tickets" class="menu-item text-light">Billetterie</router-link>
+                <router-link to="/Carte" class="menu-item text-light">Carte</router-link>
+                <router-link to="/News" class="menu-item text-light">Actualité</router-link>
+                <router-link to="/About" class="menu-item text-light">Infos & FAQ</router-link>
+                <router-link to="/Contact" class="menu-item text-light">Contact</router-link>
+            </b-row>
+            <b-row>
+                <select v-model="$i18n.locale" two>
+                    <option>FR</option>
+                    <option>EN</option>
+                </select>
+            </b-row>
         </div>
     </slide>
 </template>
@@ -28,7 +34,7 @@ import { Slide } from 'vue-burger-menu'
 <style>
 
     .menu-item{
-        margin-right: 60px;
+        margin-right: 8rem;
     }
 
     .bm-menu{

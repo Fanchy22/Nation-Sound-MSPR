@@ -1,6 +1,6 @@
 <template>
-    <div class="tickets bg-light h-100">
-        <h1 style="font-size: 2.5rem">Billeterie</h1>
+    <div class="tickets bg-light h-100" style="padding: 5vw">
+        <h1>Billeterie</h1>
         <b-container class="pb-5">
             <b-row align-h="center" class="pt-2">
                 <b-card no-body class="overflow-hidden col-md-12" text-variant="dark" style="padding: unset;">

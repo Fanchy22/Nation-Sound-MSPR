@@ -5,6 +5,10 @@ import Carte from '../views/Carte.vue'
 import Lineup from '../views/Lineup.vue'
 import Tickets from '../views/Tickets.vue'
 import About from '../views/About.vue'
+import Contact from '../views/Contact.vue'
+import News from '../views/News.vue'
+import LegalNotice from '../views/LegalNotice.vue'
+import PrivacyPolicy from '../views/PrivacyPolicy.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +37,26 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About 
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
+  },
+  {
+    path: '/legalnotice',
+    name: 'Legal Notice',
+    component: LegalNotice
+  },
+  {
+    path: '/privacypolicy',
+    name: 'Privacy Policy',
+    component: PrivacyPolicy
+  },
+  {
+    path: '/news',
+    name: 'News',
+    component: News
   }
 ];
 
