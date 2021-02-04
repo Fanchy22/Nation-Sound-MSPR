@@ -10,6 +10,23 @@
                     </countdown>
                 </b-card>
             </div>
+            <b-container v-if='newscasts.emergency === 1'>
+                <b-row class="justify-content-center">
+                    <b-card-group class="col-md-4 mb-4" deck id="emergency">
+                        <b-col style="padding: unset!important;">
+                            <b-card text-variant="dark" class="mb-2">
+                                <div style="text-align: left">
+                                    <b-card-title style="margin-bottom: 0">{{newscasts.title}}</b-card-title>
+                                    <b-card-sub-title>{{newscasts.type}} - {{newscasts.date}}</b-card-sub-title>
+                                    <b-card-text>{{newscasts.text}}</b-card-text>
+                                </div>
+                            </b-card>
+                        </b-col>
+                    </b-card-group>
+                </b-row>
+            </b-container>
+            <b-container v-else>
+            </b-container>
             <div style="position: absolute; bottom:0; margin: auto; width: 100vw; text-align:center; padding-bottom: 3vh;">
                 <p>En savoir plus</p>
                 <b-button class="btn-light btn-move" style="border-radius: 30px;" v-scroll-to="'#informations'"><i class="arrow down"></i></b-button>
@@ -38,6 +55,15 @@ Vue.component(VueCountdown.name, VueCountdown);
 
 export default {
   name: 'Home',
+    data(){
+      return{
+          newscasts: [
+              {thumbnail: "https://bit.ly/35erni9", title: 'Orelsan rejoint le NSF 2021', type: 'Programmation', emergency: "0", date: "09/10/2020", text: "Lorem Ipsum"},
+              {thumbnail: "https://bit.ly/3oTc1qF", title: 'Canicule, on vous dit tout', type: 'Météo', emergency: "1", date: "08/10/2020", text: "Lorem Ipsum"},
+              {thumbnail: "https://bit.ly/36DcFlN", title: 'La Arc Stage se renouvèle !', type: 'Organisation', emergency: "0", date: "11/09/2020", text: "Lorem Ipsum"},
+          ]
+      }
+    }
 }
 
 </script>
