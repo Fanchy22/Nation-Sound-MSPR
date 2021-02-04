@@ -11,26 +11,26 @@
                 </b-input-group>
             </b-row>
         </b-container>
-            <p>Par ordre alphabétique</p>
-            <b-row>
-                <b-card-group class="col-md-3" deck id="lineup" v-for="(artist, index) in even(filteredArtists)">
-                    <b-col>
-                        <b-card text-variant="dark" class="mb-2">
-                            <b-card-img :src='artist.thumbnail' style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
-                            <div style="text-align: left" class="mb-3">
-                                <b-card-title style="margin-bottom: 0">{{artist.name}}</b-card-title>
-                                <b-card-text>{{artist.genre}} - {{artist.type}} </b-card-text>
-                                <b-card-sub-title>{{artist.day}} - {{artist.time}}{{artist.timeValue}}</b-card-sub-title>
-                                <b-card-text>{{artist.place}}</b-card-text>
-                            </div>
-                            <b-button v-b-toggle style="text-align: center; width: 100%" class="btn-light" :href="'#example-collapse'+index" @click.prevent>En savoir plus</b-button>
-                            <b-collapse :id="'example-collapse'+index">
-                                <div class="card-body">{{artist.description}}</div>
-                            </b-collapse>
-                        </b-card>
-                    </b-col>
-                </b-card-group>
-            </b-row>
+        <p>Par ordre alphabétique</p>
+        <b-row class="justify-content-center">
+            <b-card-group class="col-md-4 mb-4" deck id="news" v-for="(artist, index) in even(filteredArtists)">
+                <b-col style="padding: unset!important;">
+                    <b-card text-variant="dark" class="mb-2">
+                        <b-card-img :src='artist.thumbnail' style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
+                        <div style="text-align: left" class="mb-3">
+                            <b-card-title style="margin-bottom: 0">{{artist.name}}</b-card-title>
+                            <b-card-text>{{artist.genre}} - {{artist.type}} </b-card-text>
+                            <b-card-sub-title>{{artist.day}} - {{artist.time}}{{artist.timeValue}}</b-card-sub-title>
+                            <b-card-text>{{artist.place}}</b-card-text>
+                        </div>
+                        <b-button v-b-toggle style="text-align: center; width: 100%" class="btn-light" :href="'#example-collapse'+index" @click.prevent>En savoir plus</b-button>
+                        <b-collapse :id="'example-collapse'+index">
+                            <div class="card-body">{{artist.description}}</div>
+                        </b-collapse>
+                    </b-card>
+                </b-col>
+            </b-card-group>
+        </b-row>
     </div>
 </template>
 

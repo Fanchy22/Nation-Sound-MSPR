@@ -12,7 +12,7 @@
             </b-row>
         </b-container>
         <p>Par date de publication</p>
-        <b-row>
+        <b-row class="justify-content-center">
             <b-card-group class="col-md-4" deck id="news" v-for="(newscast) in even(filteredNewscasts)">
                 <b-col style="padding: unset!important;">
                     <b-card id="news-card" text-variant="dark" no-body class="mb-5 overflow-auto">
