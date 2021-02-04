@@ -5,7 +5,7 @@
                 <b-card id="countdown-card" class="col-md-6">
                     <h1 style="font-size: 2.0rem!important; margin: unset!important; padding: unset!important; color: white">Nation Sound Festival</h1>
                     <p style="color: white">9 - 12 Juillet 2021 | Hippodrome de Paris Longchamp</p>
-                    <countdown :time="153 * 23 * 31 * 49 * 2500" style="font-size: 2.3rem; color: white; font-family: Poppins;">
+                    <countdown :time="153 * 23 * 31 * 49 * 2500" style="font-size: 2.3rem; color: white;">
                         <template slot-scope="props">{{ props.days }} J | {{ props.hours }} H | {{ props.minutes }} M | {{ props.seconds }} S</template>
                     </countdown>
                 </b-card>
