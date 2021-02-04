@@ -88,7 +88,7 @@
                     message: '',
                     checked: []
                 },
-                subject: [{ text: 'Sélectionnez le sujet de votre message', value: null }, 'Programmation', 'Billetterie', 'Accès au site', 'Autre'],
+                subject: [{ text: 'Sélectionnez le sujet de votre message', value: null }, 'Programmation', 'Billetterie', 'Accès au site', 'Presse', 'Bénévolat', 'Sponsoring', 'Marketing', 'Autre'],
                 show: true
             }
         },

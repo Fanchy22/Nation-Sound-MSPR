@@ -51,7 +51,7 @@ export default {
         background-color: unset;
     }
 
-    #countdown{
+    #countdown {
         background-image: url("../assets/bg-header.jpg");
         background-position-x: center;
         background-position-y: center;
