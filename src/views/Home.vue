@@ -59,8 +59,6 @@ export default {
 
     .btn-light{
         text-align: center;
-        border-radius: 35px;
-        color: white;
         font-size: 20px;
         border: none;
     }
