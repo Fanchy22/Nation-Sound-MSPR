@@ -62,8 +62,9 @@
                                     :aria-describedby="ariaDescribedby">
                                 <b-form-checkbox value="Newsletter">Je souhaite recevoir les dernières actualités du festival.</b-form-checkbox>
                             </b-form-checkbox-group>
+                            <p class="pt-3">* Champs obligatoires</p>
                         </b-form-group>
-                        <b-button type="submit" class="btn-dark mt-3">Envoyer</b-button>
+                        <b-button type="submit" class="btn-dark mt-1">Envoyer</b-button>
                     </b-form>
                 </b-card>
             </b-row>
@@ -116,5 +117,8 @@
 </script>
 
 <style>
-
+    .required:after {
+        content:" *";
+        color: darkred;
+    }
 </style>
