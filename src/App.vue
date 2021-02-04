@@ -2,7 +2,7 @@
   <div id="app" class="header">
       <header>
           <b-navbar style="background-color: black; min-height: 10vh">
-              <b-navbar-brand href="Home.vue">
+              <b-navbar-brand to="/">
                   <div class="d-flex flex-row align-items-center">
                       <img src="./assets/logo-white.png" style="height: 5vw; min-height: 10vh">
                   </div>
