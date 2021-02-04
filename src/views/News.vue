@@ -35,17 +35,23 @@
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
         name: 'News',
         data() {
             return{
                 searchString: "",
-                newscasts: [
+                newscasts: [],
+                /*newscasts: [
                     {thumbnail: "https://bit.ly/35erni9", title: 'Orelsan rejoint le NSF 2021', type: 'Programmation', emergency: "false", date: "09/10/2020", text: "Lorem Ipsum"},
                     {thumbnail: "https://bit.ly/3oTc1qF", title: 'Canicule, on vous dit tout', type: 'Météo', emergency: "true", date: "08/10/2020", text: "Lorem Ipsum"},
                     {thumbnail: "https://bit.ly/36DcFlN", title: 'La Arc Stage se renouvèle !', type: 'Organisation', emergency: "false", date: "11/09/2020", text: "Lorem Ipsum"},
-                ]
+                ]*/
             }
+        },
+        mounted(){
+            axios.get('').then(response =>
+                this.newscasts = response.data["hydra:member"])
         },
         methods: {
             even: function(arr) {
