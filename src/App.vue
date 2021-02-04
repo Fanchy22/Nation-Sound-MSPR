@@ -31,7 +31,6 @@
                           <li class="list-unstyled"><router-link to="/About" class="text-light">Infos & FAQ</router-link></li>
                           <li class="list-unstyled"><router-link to="/PrivacyPolicy" class="text-light">Politique de confidentialité</router-link></li>
                           <li class="list-unstyled"><router-link to="/LegalNotice" class="text-light">Mentions Légales</router-link></li>
-
                       </ul>
                   </div>
                   <div class="col-lg-4">
@@ -47,28 +46,35 @@
                       </div>
                   </div>
               </b-row>
-            <hr>
-            <h5 class="title text-white">Nos partenaires</h5>
-
-            <b-row>
-              <img class="col-md-2" id="parisien" src="./assets/Le_Parisien_logo.svg" alt="">
-              <img class="col-md-2" id="ville" href="https://www.leparisien.fr/" src="./assets/Ville_de_Paris_logo_2019.svg" alt="">
-                <img class="col-md-2" id="loxam"src="./assets/Loxam_Logo.svg" alt="">
-                <img class="col-md-2" id="miguel"src="./assets/san-miguel-cerveza-2-logo-svg-vector.svg" alt="">
-                <img class="col-md-2" id="pioneer"src="./assets/Pioneer_logo.svg" alt="">
-                <img class="col-md-2" id="balance"src="./assets/new-balance-2-logo-svg-vector.svg" alt="">
-
-            </b-row>
-            <hr>
-
+              <h5 class="title text-white">Nos partenaires</h5>
+              <b-row>
+                  <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
+                      <img style="max-height: 10vh; max-width: 50vw" id="parisien" src="./assets/Le_Parisien_logo.svg" alt="">
+                  </b-card>
+                  <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
+                      <img style="max-height: 10vh; max-width: 50vw" id="ville" href="https://www.leparisien.fr/" src="./assets/Ville_de_Paris_logo_2019.svg" alt="">
+                  </b-card>
+                  <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
+                      <img style="max-height: 10vh; max-width: 50vw" id="loxam"src="./assets/Loxam_Logo.svg" alt="">
+                  </b-card>
+                  <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
+                      <img style="max-height: 10vh; max-width: 50vw" id="miguel"src="./assets/san-miguel-cerveza-2-logo-svg-vector.svg" alt="">
+                  </b-card>
+                  <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
+                      <img style="max-height: 10vh; max-width: 50vw" id="pioneer"src="./assets/Pioneer_logo.svg" alt="">
+                  </b-card>
+                  <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
+                      <img style="max-height: 10vh; max-width: 50vw" id="balance"src="./assets/new-balance-2-logo-svg-vector.svg" alt="">
+                  </b-card>
+              </b-row>
               <b-row>
                   <div class="footer-copyright text-center py-3  text-light">
                       <a>&copy;2020 Copyright : Nation Sound Festival</a>
                   </div>
               </b-row>
-
           </div>
       </b-navbar>
+
   </div>
 </template>
 
@@ -103,43 +109,6 @@
          -moz-osx-font-smoothing: grayscale;
          text-align: center;
          color: #2c3e50;
-    }
-
-
-    #parisien {
-      padding-left: 90px;
-      padding-right: 30px;
-      padding-bottom: 10px;
-    }
-
-    #ville{
-      padding-left: 130px;
-      padding-right: 30px;
-      padding-bottom: 10px;
-    }
-
-    #loxam{
-      padding-left: 90px;
-      padding-right: 30px;
-      padding-bottom: 10px;
-    }
-
-    #miguel{
-      padding-left: 90px;
-      padding-right: 30px;
-      padding-bottom: 10px;
-    }
-
-    #pioneer{
-      padding-left: 90px;
-      padding-right: 30px;
-      padding-bottom: 10px;
-    }
-
-    #balance{
-      padding-left: 90px;
-      padding-right: 30px;
-      padding-bottom: 10px;
     }
 
     hr{
