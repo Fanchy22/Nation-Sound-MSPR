@@ -1,5 +1,4 @@
 <template>
-<div>
     <div>
         <div id="countdown">
             <div style="padding-top: 25vh; padding-left: 2.5vw; padding-right: .5vw" class="align-middle">
@@ -26,8 +25,6 @@
             </b-container>
         </b-row>
     </div>
-</div>
-
 </template>
 
 <script>
