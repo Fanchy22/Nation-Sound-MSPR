@@ -46,8 +46,9 @@
                       </div>
                   </div>
               </b-row>
+              <hr>
               <h5 class="title text-white">Nos partenaires</h5>
-              <b-row>
+              <b-row style="max-width: 80vw" class="mx-auto">
                   <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
                       <img style="max-height: 10vh; max-width: 50vw" id="parisien" src="./assets/Le_Parisien_logo.svg" alt="">
                   </b-card>
@@ -67,6 +68,7 @@
                       <img style="max-height: 10vh; max-width: 50vw" id="balance"src="./assets/new-balance-2-logo-svg-vector.svg" alt="">
                   </b-card>
               </b-row>
+              <hr>
               <b-row>
                   <div class="footer-copyright text-center py-3  text-light">
                       <a>&copy;2020 Copyright : Nation Sound Festival</a>
@@ -113,7 +115,7 @@
 
     hr{
       background: #F8F9FA;
-      width: 100vh;
+      width: 80vw;
 
     }
     .page-wrapper{
