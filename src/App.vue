@@ -2,7 +2,7 @@
   <div id="app" class="header">
       <header>
           <b-navbar style="background-color: black; min-height: 10vh">
-              <b-navbar-brand href="Home.vue">
+              <b-navbar-brand to="/">
                   <div class="d-flex flex-row align-items-center">
                       <img src="./assets/logo-white.png" style="height: 5vw; min-height: 10vh">
                   </div>
@@ -23,12 +23,14 @@
                   <div class="col-lg-4">
                       <ul style="padding-left: unset">
                           <h5 class="title text-white">Liens pratiques</h5>
-                          <li class="list-unstyled"><a href='Home.vue'>Accueil</a></li>
-                          <li class="list-unstyled"><a href="Lineup.vue">Programmation</a></li>
-                          <li class="list-unstyled"><a href="Tickets.vue">Billeterie</a></li>
-                          <li class="list-unstyled"><a href='Carte.vue'>Carte</a></li>
-                          <li class="list-unstyled"><a href="#!">Actualité</a></li>
-                          <li class="list-unstyled"><a href="#!">Info & FAQ</a></li>
+                          <li class="list-unstyled"><router-link to="/" class="text-light">Accueil</router-link></li>
+                          <li class="list-unstyled"><router-link to="/Lineup" class="text-light">Programmation</router-link></li>
+                          <li class="list-unstyled"><router-link to="/Tickets" class="text-light">Billetterie</router-link></li>
+                          <li class="list-unstyled"><router-link to="/Carte" class="text-light">Carte</router-link></li>
+                          <li class="list-unstyled"><router-link to="/News" class="text-light">Actualité</router-link></li>
+                          <li class="list-unstyled"><router-link to="/About" class="text-light">Infos & FAQ</router-link></li>
+                          <li class="list-unstyled"><router-link to="/PrivacyPolicy" class="text-light">Politique de confidentialité</router-link></li>
+                          <li class="list-unstyled"><router-link to="/LegalNotice" class="text-light">Mentions Légales</router-link></li>
                       </ul>
                   </div>
                   <div class="col-lg-4">
@@ -44,6 +46,29 @@
                       </div>
                   </div>
               </b-row>
+              <hr>
+              <h5 class="title text-white">Nos partenaires</h5>
+              <b-row style="max-width: 80vw" class="mx-auto">
+                  <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
+                      <img style="max-height: 10vh; max-width: 50vw" id="parisien" src="./assets/Le_Parisien_logo.svg" alt="">
+                  </b-card>
+                  <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
+                      <img style="max-height: 10vh; max-width: 50vw" id="ville" href="https://www.leparisien.fr/" src="./assets/Ville_de_Paris_logo_2019.svg" alt="">
+                  </b-card>
+                  <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
+                      <img style="max-height: 10vh; max-width: 50vw" id="loxam"src="./assets/Loxam_Logo.svg" alt="">
+                  </b-card>
+                  <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
+                      <img style="max-height: 10vh; max-width: 50vw" id="miguel"src="./assets/san-miguel-cerveza-2-logo-svg-vector.svg" alt="">
+                  </b-card>
+                  <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
+                      <img style="max-height: 10vh; max-width: 50vw" id="pioneer"src="./assets/Pioneer_logo.svg" alt="">
+                  </b-card>
+                  <b-card class="col-md-2 justify-content-center my-auto" style="background-color: transparent">
+                      <img style="max-height: 10vh; max-width: 50vw" id="balance"src="./assets/new-balance-2-logo-svg-vector.svg" alt="">
+                  </b-card>
+              </b-row>
+              <hr>
               <b-row>
                   <div class="footer-copyright text-center py-3  text-light">
                       <a>&copy;2020 Copyright : Nation Sound Festival</a>
@@ -51,6 +76,7 @@
               </b-row>
           </div>
       </b-navbar>
+
   </div>
 </template>
 
@@ -65,6 +91,7 @@
             this.$i18n.locale = 'de'
         }
     }
+
 </script>
 
 <style lang="scss">
@@ -86,6 +113,11 @@
          color: #2c3e50;
     }
 
+    hr{
+      background: #F8F9FA;
+      width: 80vw;
+
+    }
     .page-wrapper{
         min-height: 100%;
         background-color: #F8F9FA;
@@ -124,12 +156,15 @@
 
     .social a {
      padding: 10px;
-     justify-content: align-items;
      margin: 10px;
     }
 
     ul li a {
         color: #D3D0CF;
+    }
+
+    h5{
+      padding-top: 10px;
     }
 
     p{

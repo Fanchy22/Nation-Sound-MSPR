@@ -11,26 +11,26 @@
                 </b-input-group>
             </b-row>
         </b-container>
-            <p>En ordre alphabétique</p>
-            <b-row align-h="center">
-                <b-card-group class="col-md-3" deck id="lineup" v-for="(item, index) in even(filteredItems)">
-                    <b-col>
-                        <b-card text-variant="dark" class="mb-2">
-                            <b-card-img :src='item.thumbnail' style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
-                            <div style="text-align: left" class="mb-3">
-                                <b-card-title style="margin-bottom: 0">{{item.name}}</b-card-title>
-                                <b-card-text>{{item.genre}} - {{item.type}} </b-card-text>
-                                <b-card-sub-title>{{item.day}} - {{item.time}}{{item.timeValue}}</b-card-sub-title>
-                                <b-card-text>{{item.place}}</b-card-text>
-                            </div>
-                            <b-button v-b-toggle style="text-align: center; width: 100%" class="btn-light" :href="'#example-collapse'+index" @click.prevent>En savoir plus</b-button>
-                            <b-collapse :id="'example-collapse'+index">
-                                <div class="card-body">{{item.description}}</div>
-                            </b-collapse>
-                        </b-card>
-                    </b-col>
-                </b-card-group>
-            </b-row>
+        <p>Par ordre alphabétique</p>
+        <b-row class="justify-content-center">
+            <b-card-group class="col-md-4 mb-4" deck id="news" v-for="(artist, index) in even(filteredArtists)">
+                <b-col style="padding: unset!important;">
+                    <b-card text-variant="dark" class="mb-2">
+                        <b-card-img :src='artist.thumbnail' style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
+                        <div style="text-align: left" class="mb-3">
+                            <b-card-title style="margin-bottom: 0">{{artist.name}}</b-card-title>
+                            <b-card-text>{{artist.genre}} - {{artist.type}} </b-card-text>
+                            <b-card-sub-title>{{artist.day}} - {{artist.time}}{{artist.timeValue}}</b-card-sub-title>
+                            <b-card-text>{{artist.place}}</b-card-text>
+                        </div>
+                        <b-button v-b-toggle style="text-align: center; width: 100%" class="btn-light" :href="'#example-collapse'+index" @click.prevent>En savoir plus</b-button>
+                        <b-collapse :id="'example-collapse'+index">
+                            <div class="card-body">{{artist.description}}</div>
+                        </b-collapse>
+                    </b-card>
+                </b-col>
+            </b-card-group>
+        </b-row>
     </div>
 </template>
 
@@ -40,7 +40,7 @@
         data() {
             return{
                 searchString: "",
-                items: [
+                artists: [
                     {thumbnail: "https://bit.ly/35erni9", name: 'Orelsan', genre: 'Rap', day: "Friday", time: "8", timeValue: "PM", place: "Urban Arena", type:"Concert", description:"Lorem ispum"},
                     {thumbnail: "https://bit.ly/38j1n7f", name: 'David Ghetto', genre: 'EDM', day: "Saturday", time: "11", timeValue: "PM", place: "Arc Stage", type:"Concert", description:"Lorem ispum"},
                     {thumbnail: "https://bit.ly/38j1n7f", name: 'David Ghetto', genre: 'EDM', day: "Saturday", time: "6", timeValue: "PM", place: "Gold Room", type:"Meeting", description:"Lorem ispum"},
@@ -56,43 +56,42 @@
             },
         },
         computed: {
-            filteredItems: function () {
-                let items_array = this.items,
+            filteredArtists: function () {
+                let artists_array = this.artists,
                     searchString = this.searchString;
 
                 if(!searchString){
-                    return items_array;
+                    return artists_array;
                 }
                 searchString = searchString.trim().toLowerCase();
-                items_array = items_array.filter(function(item){
-                    if(item.name.toLowerCase().indexOf(searchString) !== -1){
-                        return item;
+                artists_array = artists_array.filter(function(artist){
+                    if(artist.name.toLowerCase().indexOf(searchString) !== -1){
+                        return artist;
                     }
-                    if(item.genre.toLowerCase().indexOf(searchString) !== -1){
-                        return item;
+                    if(artist.genre.toLowerCase().indexOf(searchString) !== -1){
+                        return artist;
                     }
-                    if(item.day.toLowerCase().indexOf(searchString) !== -1){
-                        return item;
+                    if(artist.day.toLowerCase().indexOf(searchString) !== -1){
+                        return artist;
                     }
-                    if(item.time.toLowerCase().indexOf(searchString) !== -1){
-                        return item;
+                    if(artist.time.toLowerCase().indexOf(searchString) !== -1){
+                        return artist;
                     }
-                    if(item.timeValue.toLowerCase().indexOf(searchString) !== -1){
-                        return item;
+                    if(artist.timeValue.toLowerCase().indexOf(searchString) !== -1){
+                        return artist;
                     }
-                    if(item.place.toLowerCase().indexOf(searchString) !== -1){
-                        return item;
+                    if(artist.place.toLowerCase().indexOf(searchString) !== -1){
+                        return artist;
                     }
-                    if(item.type.toLowerCase().indexOf(searchString) !== -1){
-                        return item;
+                    if(artist.type.toLowerCase().indexOf(searchString) !== -1){
+                        return artist;
                     }
                 });
-                return items_array;
+                return artists_array;
             }
         }
     }
 </script>
 
 <style>
-    
 </style>
