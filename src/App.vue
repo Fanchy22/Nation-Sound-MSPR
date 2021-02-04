@@ -23,12 +23,15 @@
                   <div class="col-lg-4">
                       <ul style="padding-left: unset">
                           <h5 class="title text-white">Liens pratiques</h5>
-                          <li class="list-unstyled"><a href='Home.vue'>Accueil</a></li>
-                          <li class="list-unstyled"><a href="Lineup.vue">Programmation</a></li>
-                          <li class="list-unstyled"><a href="Tickets.vue">Billeterie</a></li>
-                          <li class="list-unstyled"><a href='Carte.vue'>Carte</a></li>
-                          <li class="list-unstyled"><a href="#!">Actualité</a></li>
-                          <li class="list-unstyled"><a href="#!">Info & FAQ</a></li>
+                          <li class="list-unstyled"><router-link to="/" class="text-light">Accueil</router-link></li>
+                          <li class="list-unstyled"><router-link to="/Lineup" class="text-light">Programmation</router-link></li>
+                          <li class="list-unstyled"><router-link to="/Tickets" class="text-light">Billetterie</router-link></li>
+                          <li class="list-unstyled"><router-link to="/Carte" class="text-light">Carte</router-link></li>
+                          <li class="list-unstyled"><router-link to="/News" class="text-light">Actualité</router-link></li>
+                          <li class="list-unstyled"><router-link to="/About" class="text-light">Infos & FAQ</router-link></li>
+                          <li class="list-unstyled"><router-link to="/PrivacyPolicy" class="text-light">Politique de confidentialité</router-link></li>
+                          <li class="list-unstyled"><router-link to="/LegalNotice" class="text-light">Mentions Légales</router-link></li>
+
                       </ul>
                   </div>
                   <div class="col-lg-4">
@@ -44,11 +47,26 @@
                       </div>
                   </div>
               </b-row>
+            <hr>
+            <h5 class="title text-white">Nos partenaires</h5>
+
+            <b-row>
+              <img class="col-md-2" id="parisien" src="./assets/Le_Parisien_logo.svg" alt="">
+              <img class="col-md-2" id="ville" href="https://www.leparisien.fr/" src="./assets/Ville_de_Paris_logo_2019.svg" alt="">
+                <img class="col-md-2" id="loxam"src="./assets/Loxam_Logo.svg" alt="">
+                <img class="col-md-2" id="miguel"src="./assets/san-miguel-cerveza-2-logo-svg-vector.svg" alt="">
+                <img class="col-md-2" id="pioneer"src="./assets/Pioneer_logo.svg" alt="">
+                <img class="col-md-2" id="balance"src="./assets/new-balance-2-logo-svg-vector.svg" alt="">
+
+            </b-row>
+            <hr>
+
               <b-row>
                   <div class="footer-copyright text-center py-3  text-light">
                       <a>&copy;2020 Copyright : Nation Sound Festival</a>
                   </div>
               </b-row>
+
           </div>
       </b-navbar>
   </div>
@@ -65,6 +83,7 @@
             this.$i18n.locale = 'de'
         }
     }
+
 </script>
 
 <style lang="scss">
@@ -86,6 +105,48 @@
          color: #2c3e50;
     }
 
+
+    #parisien {
+      padding-left: 90px;
+      padding-right: 30px;
+      padding-bottom: 10px;
+    }
+
+    #ville{
+      padding-left: 130px;
+      padding-right: 30px;
+      padding-bottom: 10px;
+    }
+
+    #loxam{
+      padding-left: 90px;
+      padding-right: 30px;
+      padding-bottom: 10px;
+    }
+
+    #miguel{
+      padding-left: 90px;
+      padding-right: 30px;
+      padding-bottom: 10px;
+    }
+
+    #pioneer{
+      padding-left: 90px;
+      padding-right: 30px;
+      padding-bottom: 10px;
+    }
+
+    #balance{
+      padding-left: 90px;
+      padding-right: 30px;
+      padding-bottom: 10px;
+    }
+
+    hr{
+      background: #F8F9FA;
+      width: 100vh;
+
+    }
     .page-wrapper{
         min-height: 100%;
         background-color: #F8F9FA;
@@ -102,6 +163,7 @@
         color: white;
         min-height: 40vh;
         position: relative;
+        box-shadow: 10px 10px 10px 10px black;
     }
 
     .footer-content{
@@ -124,12 +186,15 @@
 
     .social a {
      padding: 10px;
-     justify-content: align-items;
      margin: 10px;
     }
 
     ul li a {
         color: #D3D0CF;
+    }
+
+    h5{
+      padding-top: 10px;
     }
 
     p{
