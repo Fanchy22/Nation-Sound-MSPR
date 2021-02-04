@@ -94,4 +94,8 @@ export default {
     .down{
         -webkit-transform: rotate(45deg);
     }
+
+    .bm-burger-bars{
+        background-color: white;
+    }
 </style>
