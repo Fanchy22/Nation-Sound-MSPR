@@ -14,8 +14,25 @@
             </b-row>
             <b-row>
                 <div style="text-align: left">
-                    <h2 class="pb-2 pt-2" style="font-size: 1.5rem">Lorem ipsum</h2>
-                    <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <h2 class="pb-2 pt-2" style="font-size: 1.5rem">Quelques infos sur le site.</h2>
+                    <p class="text-dark">Situé dans l'enceinte de "l'Hippodrome Longchamp" notre festival Nation Sound vous accueil dans ce site prestigieux pour un week-end de folie. Retrouvez quatre scènes :
+                      <br><br>
+                      - Arc Stage <br>
+                      - Urban Area <br>
+                      - Warehouse <br>
+                      - San Miguel Arena <br>
+                      <br>
+                      Retrouvez de nombreux Bar et plus d'une vingtaine de Food Truck pour un large choix de nourriture au plus grand plaisir de tous !
+                      Un centre de soin a été installé à proximité de l'une des entrées du festival au niveau de la porte (North Gate) <b>ce point médicale permet également le depistage Covid-19.</b>
+                    </p>
+                  <h2 class="pb-2 pt-2" style="font-size: 1.5rem">Accessibilité</h2>
+                  <p class="text-dark">Chaque année, le Festival Nation Sounds s'engage pour que les personnes en situation de handicap ne soient pas exclues de la culture, en développant progressivement des mesures adaptées à chaque public : plans PMR des lieux du Festival, formation du personnel afin qu'il puisse répondre aux attentes des spectateurs en situation de handicap.
+                    <br><br>
+                    De manière générale, si souhaitez bénéficier de conseils sur la programmation, faire une réservation et bénéficier de tarifs adaptés ou encore nous informer de vos besoins en termes d’accueil :
+                    accessibilite@festival-nationsounds.com
+                    <br><br>
+                    Vous pouvez nous contacter ou nous poser vos questions dans notre rubrique FAQ accessible en cliquant sur "Plus d'informations".
+                  </p>
                 </div>
                 <div class="pt-4 mx-auto" style="justify-content: center">
                     <b-button class="btn-dark" style="margin-right: 1vw" to="/About">Plus d'informations</b-button>

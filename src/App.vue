@@ -35,7 +35,8 @@
                   </div>
                   <div class="col-lg-4">
                       <h5 class="title text-white">À propos</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis, eaque earum iure magni minus omnis quos. Eveniet nam nulla tempora. Aliquid delectus esse eveniet inventore ipsa! Libero porro, sed.</p>
+                      <p>Si souhaitez bénéficier de conseils sur la programmation, faire une réservation et bénéficier de tarifs adaptés ou encore nous informer de vos besoins en termes d’accueil :
+                        <b>accessibilite@festival-nationsounds.com</b></p>
                   </div>
                   <div class="col-lg-4 ">
                       <h5 class="title text-white">Contact</h5>
