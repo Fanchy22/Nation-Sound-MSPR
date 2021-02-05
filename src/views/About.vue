@@ -50,8 +50,17 @@
         data() {
             return {
                 informations: [
-                    {title: 'Title 1', text: 'Lorem Ipsum, ipsum Lorem'},
-                    {title: 'Title 2', text: 'Lorem IpsumSinon quanet ta grand mère en slip'},
+                    {title: 'Le Festival Nation Sounds c’est...', text: 'Fondé en 2017 par Phillippe Legaec, le Festival Nation Sounds est aujourd\'hui l\'une des plus importantes manifestations du spectacle vivant contemporain à Paris. Ce festival regroupe chaque année des centaines de milliers de personnes venues de toute l’Europe. \n' +
+                            'Et pour cause ! C’est une centaine d’artistes parmi les plus grandes stars du moment qui se succèdent pendant 3 jours sur scène. Le meilleur dans tout ça, c’est que l’ensemble des fonds récoltés sont destinés à une association humanitaire. \n' +
+                            'En ce qui concerne le programme, il se compose de spectacles, mais aussi de concerts et de rencontres avec des artistes incroyables. Il y a, chaque soir, une ou plusieurs scènes, qui font de Paris un véritable lieu de rencontres et de découvertes, pour les artistes comme pour les spectateurs. \n'},
+                    {title: 'Accessibilité', text: 'Chaque année, le Festival Nation Sounds s\'engage pour que les personnes en situation de handicap ne soient pas exclues de la culture, en développant progressivement des mesures adaptées à chaque public : plans PMR des lieux du Festival, formation du personnel afin qu\'il puisse répondre aux attentes des spectateurs en situation de handicap. \n\nDe manière générale, si souhaitez bénéficier de conseils sur la programmation, faire une réservation et bénéficier de tarifs adaptés ou encore nous informer de vos besoins en termes d’accueil : \n' +
+                            'accessibilite@festival-nationsounds.com\n'},
+                    {title: 'Protocole sanitaire \n', text: 'Dans l’ensemble des lieux :\n' +
+                            'je porte un masque,\n' +
+                            'je respecte la distanciation physique,\n' +
+                            'je me lave les mains,\n' +
+                            'aucuns vestiaire n’est proposé,\n' +
+                            'du gel hydroalcoolique est proposé.\n'}
                 ],
                 faqs: []
             }

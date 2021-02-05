@@ -14,7 +14,7 @@
             </b-row>
             <b-row>
                 <div style="text-align: left">
-                    <h2 class="pb-2 pt-2" style="font-size: 1.5rem">Quelques infos sur le site.</h2>
+                    <h2 class="pb-2 pt-2" style="font-size: 1.5rem">Quelques informations sur le site du festival</h2>
                     <p class="text-dark">Situé dans l'enceinte de "l'Hippodrome Longchamp" notre festival Nation Sound vous accueil dans ce site prestigieux pour un week-end de folie. Retrouvez quatre scènes :
                       <br><br>
                       - Arc Stage <br>
@@ -23,7 +23,7 @@
                       - San Miguel Arena <br>
                       <br>
                       Retrouvez de nombreux Bar et plus d'une vingtaine de Food Truck pour un large choix de nourriture au plus grand plaisir de tous !
-                      Un centre de soin a été installé à proximité de l'une des entrées du festival au niveau de la porte (North Gate) <b>ce point médicale permet également le depistage Covid-19.</b>
+                      Un centre de soin a été installé à proximité de l'une des entrées du festival au niveau de la porte (North Gate) <b>ce point médical permet également le depistage Covid-19.</b>
                     </p>
                   <h2 class="pb-2 pt-2" style="font-size: 1.5rem">Accessibilité</h2>
                   <p class="text-dark">Chaque année, le Festival Nation Sounds s'engage pour que les personnes en situation de handicap ne soient pas exclues de la culture, en développant progressivement des mesures adaptées à chaque public : plans PMR des lieux du Festival, formation du personnel afin qu'il puisse répondre aux attentes des spectateurs en situation de handicap.
