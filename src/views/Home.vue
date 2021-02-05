@@ -34,7 +34,7 @@
         <b-row id="informations" style="margin: unset!important;">
             <b-container style="padding: 5vw;">
                 <div id="about" style="padding-bottom: 5vw;">
-                    <h1 style="font-size: 2.5rem">À propos de nous</h1>
+                    <h1>À propos de nous</h1>
                     <div style="text-align: left">
                         <h2 class="pb-2 pt-2" style="font-size: 1.5rem">Un évènement unique en France</h2>
                         <p class="text-dark">
@@ -51,8 +51,19 @@
                         <b-button class="btn-dark" style="margin-right: 1vw" to="/Lineup">Programmation</b-button>
                     </div>
                 </div>
-                <div id="actu" class="mx-auto mt-5" style="text-align: center">
-                    <h1 style="font-size: 2.5rem">Nos actualités</h1>
+                <b-card
+                        style="width: 100%; align-content: center;"
+                        overlay
+                        img-top
+                        img-src="https://bit.ly/3aBRfGH"
+                        img-alt="Billetterie"
+                        text-variant="white"
+                        class="mb-5">
+                    <h1 style="padding-bottom: unset!important">Billetterie 2021</h1>
+                    <b-button class="btn-dark" to="/Tickets">Accéder à la billeterie</b-button>
+                </b-card>
+                <div id="actu" class="mx-auto mt-5" style="text-align: center; padding-bottom: 5vw;">
+                    <h1>Nos actualités</h1>
                     <b-row class="justify-content-center">
                         <b-card-group deck id="news" v-for="(newscast) in newscasts.slice(0, 3)">
                             <b-col style="padding: unset!important;">
@@ -72,7 +83,26 @@
                             </b-col>
                         </b-card-group>
                     </b-row>
-                    <b-button class="btn-dark" style="margin-right: 1vw" to="/News">Plus d'actualités</b-button>
+                    <b-button class="btn-dark mt-4" style="margin-right: 1vw" to="/News">Plus d'actualités</b-button>
+                </div>
+                <div id="map" class="carte mx-auto mt-5" style="text-align: center; padding-top: 3vh">
+                    <h1>Carte du festival</h1>
+                    <b-container>
+                        <b-row align-h="center" class="pb-5">
+                            <b-card no-body class="overflow-hidden col-md-12" text-variant="dark" style="padding: unset; height: 60vh">
+                                <b-row no-gutters>
+                                    <MglMap class="mgl-map-wrapper rounded-0" :accessToken=accessToken :mapStyle=mapStyle @load="onMapLoaded">
+                                        <MglNavigationControl position="top-right"/>
+                                        <MglGeolocateControl position="top-right"/>
+                                    </MglMap>
+                                </b-row>
+                            </b-card>
+                        </b-row>
+                    </b-container>
+                    <div class="pt-2 mx-auto" style="justify-content: center">
+                        <b-button class="btn-dark" style="margin-right: 1vw" to="/News">En savoir plus sur l'accès au festival</b-button>
+                        <b-button class="btn-dark" style="margin-right: 1vw" to="/Contact">Nous contacter</b-button>
+                    </div>
                 </div>
             </b-container>
         </b-row>
@@ -109,12 +139,29 @@ export default {
             accessToken:"pk.eyJ1IjoiZW56b2JvZGluZ2VybW9uIiwiYSI6ImNraDFycHpxNjA3bWsyeW14M25qNzg1MW8ifQ.KSjISzZXWPPQ2tbBQwY9gg", // your access token. Needed if you using Mapbox maps
             mapStyle:"mapbox://styles/enzobodingermon/ckkgy09c00tj317pdn7u4pc1s", // your map style
         };
+    },
+    created() {
+        this.map = null;
+    },
+    methods: {
+        onMapLoaded(event) {
+            // in component
+            this.map = event.map;
+            // or just to store if you want have access from other components
+            this.$store.map = event.map;
+        }
     }
 }
 
 </script>
 
 <style>
+    .card-img-top {
+        width: 100%;
+        height: 10vw;
+        object-fit: cover;
+    }
+
     #countdown-card{
         border: unset;
         background-color: unset;
