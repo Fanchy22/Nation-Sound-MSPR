@@ -29,7 +29,7 @@
                         </b-card-header>
                         <b-collapse :id="'accordion-'+index" accordion="my-accordion" role="tabpanel">
                             <b-card-body>
-                                <b-card-text class="text-dark float-left pb-4">{{faq.answer}}</b-card-text>
+                                <b-card-text style="text-align: left" class="text-dark pb-4">{{faq.response}}</b-card-text>
                             </b-card-body>
                         </b-collapse>
                     </b-card>
@@ -44,6 +44,7 @@
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
         name: 'About',
         data() {
@@ -52,13 +53,15 @@
                     {title: 'Title 1', text: 'Lorem Ipsum, ipsum Lorem'},
                     {title: 'Title 2', text: 'Lorem IpsumSinon quanet ta grand mère en slip'},
                 ],
-                faqs: [
-                    {question: 'Q1', answer: 'A1'},
-                    {question: 'Q2', answer: 'A2'},
-                    {question: 'Q3', answer: 'A3'},
-                    {question: 'Q4', answer: 'A4'},
-                ]
+                faqs: []
             }
+        },
+        mounted(){
+            axios.get('https://wis3.etu.epsi-nantes.fr/MSPR-Nation-Sound-back/public/index.php/api/faq')
+                .then(response => {
+                    // JSON responses are automatically parsed.
+                    this.faqs = response.data
+                })
         },
     }
 </script>
