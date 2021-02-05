@@ -11,13 +11,13 @@
                 </b-card>
             </div>
             <b-container class="justify-content-center" v-for="(newscast) in newscasts" >
-                <b-row  v-if='newscast.emergency === "1"' class="justify-content-center">
+                <b-row  v-if="newscast.emergency == '1'" class="justify-content-center">
                     <b-card-group class="col-md-5 mb-4" deck id="emergency">
                         <b-col style="padding: unset!important;">
                             <b-card style="background: rgba(200, 000, 000, 0.5);" text-variant="dark" class="mx-auto mb-2">
                                 <div class="justify-content-center">
                                     <b-card-title class="text-white mb-1">Alerte : {{newscast.title}}</b-card-title>
-                                    <b-card-text class="text-white">{{newscast.type}} - {{newscast.date}}</b-card-text>
+                                    <b-card-text class="text-white">{{newscast.content}}</b-card-text>
                                 </div>
                             </b-card>
                         </b-col>
@@ -75,7 +75,7 @@
                                         <b-col md="8">
                                             <b-card-body style="text-align: left" :title='newscast.title'>
                                                 <b-card-text>{{newscast.type}} - {{newscast.date}}</b-card-text>
-                                                <b-card-text class="text-dark">{{newscast.text}}</b-card-text>
+                                                <b-card-text class="text-dark">{{newscast.content}}</b-card-text>
                                             </b-card-body>
                                         </b-col>
                                     </b-row>
@@ -114,6 +114,7 @@
     import VueCountdown from '@chenfengyuan/vue-countdown';
     import { MglMap, MglNavigationControl, MglGeolocateControl } from "vue-mapbox";
     import "mapbox-gl/dist/mapbox-gl.css"
+    import axios from 'axios';
 
 Vue.component(VueCountdown.name, VueCountdown);
 
@@ -129,16 +130,17 @@ export default {
     },
     data(){
         return{
-            newscasts: [
-                {thumbnail: "https://bit.ly/35erni9", title: 'Orelsan rejoint le NSF 2021', type: 'Programmation', emergency: "1", date: "09/10/2020", text: "Lorem Ipsum"},
-                {thumbnail: "https://bit.ly/3oTc1qF", title: 'Canicule, on vous dit tout', type: 'Météo', emergency: "0", date: "08/10/2020", text: "Lorem Ipsum"},
-                {thumbnail: "https://bit.ly/36DcFlN", title: 'La Arc Stage se renouvèle !', type: 'Organisation', emergency: "0", date: "11/09/2020", text: "Lorem Ipsum"},
-                {thumbnail: "https://bit.ly/36DcFlN", title: 'La Arc Stage se renouvèle !', type: 'Organisation', emergency: "0", date: "11/09/2020", text: "Lorem Ipsum"},
-                {thumbnail: "https://bit.ly/36DcFlN", title: 'La Arc Stage se renouvèle !', type: 'Organisation', emergency: "0", date: "11/09/2020", text: "Lorem Ipsum"}
-            ],
+            newscasts: [],
             accessToken:"pk.eyJ1IjoiZW56b2JvZGluZ2VybW9uIiwiYSI6ImNraDFycHpxNjA3bWsyeW14M25qNzg1MW8ifQ.KSjISzZXWPPQ2tbBQwY9gg", // your access token. Needed if you using Mapbox maps
             mapStyle:"mapbox://styles/enzobodingermon/ckkgy09c00tj317pdn7u4pc1s", // your map style
         };
+    },
+    mounted(){
+        axios.get('https://wis3.etu.epsi-nantes.fr/MSPR-Nation-Sound-back/public/index.php/api/actualites')
+            .then(response => {
+                // JSON responses are automatically parsed.
+                this.newscasts = response.data
+            })
     },
     created() {
         this.map = null;

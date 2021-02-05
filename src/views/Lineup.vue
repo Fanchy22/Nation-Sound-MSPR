@@ -86,9 +86,6 @@
                     if(artist.time.toLowerCase().indexOf(searchString) !== -1){
                         return artist;
                     }
-                    if(artist.timeValue.toLowerCase().indexOf(searchString) !== -1){
-                        return artist;
-                    }
                     if(artist.place.toLowerCase().indexOf(searchString) !== -1){
                         return artist;
                     }

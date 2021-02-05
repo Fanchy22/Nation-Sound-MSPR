@@ -23,7 +23,7 @@
                             <b-col md="8">
                                 <b-card-body style="text-align: left" :title='newscast.title'>
                                     <b-card-text>{{newscast.type}} - {{newscast.date}}</b-card-text>
-                                    <b-card-text class="text-dark">{{newscast.text}}</b-card-text>
+                                    <b-card-text class="text-dark">{{newscast.content}}</b-card-text>
                                 </b-card-body>
                             </b-col>
                         </b-row>
@@ -41,16 +41,15 @@
         data() {
             return{
                 searchString: "",
-                newscasts: [
-                    {thumbnail: "https://bit.ly/35erni9", title: 'Orelsan rejoint le NSF 2021', type: 'Programmation', emergency: "0", date: "09/10/2020", text: "Lorem Ipsum"},
-                    {thumbnail: "https://bit.ly/3oTc1qF", title: 'Canicule, on vous dit tout', type: 'Météo', emergency: "1", date: "08/10/2020", text: "Lorem Ipsum"},
-                    {thumbnail: "https://bit.ly/36DcFlN", title: 'La Arc Stage se renouvèle !', type: 'Organisation', emergency: "0", date: "11/09/2020", text: "Lorem Ipsum"},
-                ]
+                newscasts: []
             }
         },
         mounted(){
-            axios.get('').then(response =>
-                this.newscasts = response.data["hydra:member"])
+            axios.get('https://wis3.etu.epsi-nantes.fr/MSPR-Nation-Sound-back/public/index.php/api/actualites')
+                .then(response => {
+                    // JSON responses are automatically parsed.
+                    this.newscasts = response.data
+                })
         },
         methods: {
             even: function(arr) {
@@ -72,7 +71,7 @@
                     if(newscast.title.toLowerCase().indexOf(searchString) !== -1){
                         return newscast;
                     }
-                    if(newscast.type.toLowerCase().indexOf(searchString) !== -1){
+                    /*if(newscast.type.toLowerCase().indexOf(searchString) !== -1){
                         return newscast;
                     }
                     if(newscast.date.toLowerCase().indexOf(searchString) !== -1){
@@ -80,7 +79,7 @@
                     }
                     if(newscast.text.toLowerCase().indexOf(searchString) !== -1){
                         return newscast;
-                    }
+                    }*/
                 });
                 return newscasts_array;
             }
