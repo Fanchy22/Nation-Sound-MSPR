@@ -16,7 +16,7 @@
             <b-card-group class="col-md-4 mb-4" deck id="news" v-for="(artist, index) in artiste">
                 <b-col style="padding: unset!important;">
                     <b-card text-variant="dark" class="mb-2">
-                        <b-card-img :sr="'https://wis3.etu.epsi-nantes.fr/MSPR-Nation-Sound-back/public/index.php/' + artist.thumbnail" style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
+                        <b-card-img :src="'https://wis3.etu.epsi-nantes.fr/MSPR-Nation-Sound-back/public/index.php/' + artiste.thumbnail" style="float: left; width: 100px; height: 100px; object-fit: cover;" class="mr-3"></b-card-img>
                         <div style="text-align: left" class="mb-3">
                             <b-card-title style="margin-bottom: 0">{{artist.name}}</b-card-title>
                             <b-card-text>{{artist.genre}} - {{artist.type}} </b-card-text>

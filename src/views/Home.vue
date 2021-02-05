@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="countdown">
-            <div style="padding-top: 25vh; padding-left: 2.5vw; padding-right: .5vw" class="align-middle">
+            <div style="padding-top: 25vh" class="align-middle">
                 <b-card id="countdown-card" class="col-md-6">
                     <h1 style="font-size: 2.0rem!important; margin: unset!important; padding: unset!important; color: white">Nation Sound Festival</h1>
                     <p style="color: white">9 - 12 Juillet 2021 | Hippodrome de Paris Longchamp</p>
@@ -10,22 +10,21 @@
                     </countdown>
                 </b-card>
             </div>
-            <b-container v-if='newscasts.emergency === 1'>
-                <b-row class="justify-content-center">
-                    <b-card-group class="col-md-4 mb-4" deck id="emergency">
+            <b-container class="justify-content-center" v-for="(newscast) in newscasts" >
+                <b-row  v-if='newscast.emergency === "1"' class="justify-content-center">
+                    <b-card-group class="col-md-5 mb-4" deck id="emergency">
                         <b-col style="padding: unset!important;">
-                            <b-card text-variant="dark" class="mb-2">
-                                <div style="text-align: left">
-                                    <b-card-title style="margin-bottom: 0">{{newscasts.title}}</b-card-title>
-                                    <b-card-sub-title>{{newscasts.type}} - {{newscasts.date}}</b-card-sub-title>
-                                    <b-card-text>{{newscasts.text}}</b-card-text>
+                            <b-card style="background: rgba(200, 000, 000, 0.5);" text-variant="dark" class="mx-auto mb-2">
+                                <div class="justify-content-center">
+                                    <b-card-title class="text-white mb-1">Alerte : {{newscast.title}}</b-card-title>
+                                    <b-card-text class="text-white">{{newscast.type}} - {{newscast.date}}</b-card-text>
                                 </div>
                             </b-card>
                         </b-col>
                     </b-card-group>
                 </b-row>
-            </b-container>
-            <b-container v-else>
+                <b-row v-else class="justify-content-center">
+                </b-row>
             </b-container>
             <div style="position: absolute; bottom:0; margin: auto; width: 100vw; text-align:center; padding-bottom: 3vh;">
                 <p>En savoir plus</p>
@@ -58,8 +57,8 @@ export default {
     data(){
       return{
           newscasts: [
-              {thumbnail: "https://bit.ly/35erni9", title: 'Orelsan rejoint le NSF 2021', type: 'Programmation', emergency: "0", date: "09/10/2020", text: "Lorem Ipsum"},
-              {thumbnail: "https://bit.ly/3oTc1qF", title: 'Canicule, on vous dit tout', type: 'Météo', emergency: "1", date: "08/10/2020", text: "Lorem Ipsum"},
+              {thumbnail: "https://bit.ly/35erni9", title: 'Orelsan rejoint le NSF 2021', type: 'Programmation', emergency: "1", date: "09/10/2020", text: "Lorem Ipsum"},
+              {thumbnail: "https://bit.ly/3oTc1qF", title: 'Canicule, on vous dit tout', type: 'Météo', emergency: "0", date: "08/10/2020", text: "Lorem Ipsum"},
               {thumbnail: "https://bit.ly/36DcFlN", title: 'La Arc Stage se renouvèle !', type: 'Organisation', emergency: "0", date: "11/09/2020", text: "Lorem Ipsum"},
           ]
       }
